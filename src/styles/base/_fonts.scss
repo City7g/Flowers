@@ -1,0 +1,111 @@
+.title-h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  @media (min-width: 1200px) {
+    font-size: 67px;
+  }
+}
+
+.title-h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (min-width: 1200px) {
+    font-size: 50px;
+  }
+}
+
+.title-h3 {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (min-width: 1200px) {
+    font-size: 38px;
+  }
+}
+
+.title-h4 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (min-width: 1200px) {
+    font-size: 28px;
+  }
+}
+
+.title-h5 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (min-width: 1200px) {
+    font-size: 21px;
+  }
+}
+
+.title-h6 {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.text-subtitle {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.text-body {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.text-button {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.text-link {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.text-overline {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.text-caption {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.text-caption-small {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+}
