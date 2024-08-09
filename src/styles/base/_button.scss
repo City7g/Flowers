@@ -27,6 +27,12 @@
   &:active {
     background: black;
   }
+
+  &:disabled {
+    background: #d2d2d7;
+    color: #808080;
+    border-color: #d2d2d7;
+  }
 }
 
 .btn-secondary {
@@ -43,6 +49,12 @@
     color: black;
     background: white;
   }
+
+  &:disabled {
+    background: white;
+    color: #808080;
+    border-color: #d2d2d7;
+  }
 }
 
 .btn-tertiary {
@@ -58,5 +70,11 @@
   &:active {
     color: black;
     background: white;
+  }
+
+  &:disabled {
+    background: transparent;
+    color: #d2d2d7;
+    border-color: #808080;
   }
 }
