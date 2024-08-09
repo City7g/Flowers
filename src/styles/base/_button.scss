@@ -1,0 +1,62 @@
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 175px;
+  padding: 14px 24px 16px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: black;
+  border: 1px solid black;
+  color: white;
+  transition: 0.3s ease;
+  transition-property: color, background, border;
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  &:hover {
+    background: #424245;
+  }
+
+  &:active {
+    background: black;
+  }
+}
+
+.btn-secondary {
+  background: white;
+  border-color: black;
+  color: black;
+
+  &:hover {
+    color: white;
+    background: black;
+  }
+
+  &:active {
+    color: black;
+    background: white;
+  }
+}
+
+.btn-tertiary {
+  color: white;
+  background: transparent;
+  border-color: white;
+
+  &:hover {
+    color: #424245;
+    background: white;
+  }
+
+  &:active {
+    color: black;
+    background: white;
+  }
+}
