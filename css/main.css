@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  background: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
+.title-h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+@media (min-width: 1200px) {
+  .title-h1 {
+    font-size: 67px;
+  }
+}
+
+.title-h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@media (min-width: 1200px) {
+  .title-h2 {
+    font-size: 50px;
+  }
+}
+
+.title-h3 {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@media (min-width: 1200px) {
+  .title-h3 {
+    font-size: 38px;
+  }
+}
+
+.title-h4 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@media (min-width: 1200px) {
+  .title-h4 {
+    font-size: 28px;
+  }
+}
+
+.title-h5 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@media (min-width: 1200px) {
+  .title-h5 {
+    font-size: 21px;
+  }
+}
+
+.title-h6 {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.text-subtitle {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.text-body {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.text-button {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .text-button {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
+.text-link {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@media (min-width: 1200px) {
+  .text-link {
+    font-size: 16px;
+  }
+}
+
+.text-overline {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .text-overline {
+    font-size: 14px;
+  }
+}
+
+.text-caption {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.text-caption-small {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 175px;
+  padding: 14px 24px 16px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: black;
+  border: 1px solid black;
+  color: white;
+  transition: 0.3s ease;
+  transition-property: color, background, border;
+}
+@media (min-width: 1200px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-tertiary {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-tertiary:hover {
+  background: #424245;
+}
+.btn-primary:active,
+.btn-secondary:active,
+.btn-tertiary:active {
+  background: black;
+}
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-tertiary:disabled {
+  background: #d2d2d7;
+  color: #808080;
+  border-color: #d2d2d7;
+}
+
+.btn-secondary {
+  background: white;
+  border-color: black;
+  color: black;
+}
+.btn-secondary:hover {
+  color: white;
+  background: black;
+}
+.btn-secondary:active {
+  color: black;
+  background: white;
+}
+.btn-secondary:disabled {
+  background: white;
+  color: #808080;
+  border-color: #d2d2d7;
+}
+
+.btn-tertiary {
+  color: white;
+  background: transparent;
+  border-color: white;
+}
+.btn-tertiary:hover {
+  color: #424245;
+  background: white;
+}
+.btn-tertiary:active {
+  color: black;
+  background: white;
+}
+.btn-tertiary:disabled {
+  background: transparent;
+  color: #d2d2d7;
+  border-color: #808080;
+}/*# sourceMappingURL=main.css.map */
