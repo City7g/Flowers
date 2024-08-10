@@ -1,0 +1,36 @@
+.why-section {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: flex-start;
+  }
+}
+
+.why-section__title,
+.why-section__block {
+  padding: 40px 16px;
+
+  @media (min-width: 768px) {
+    padding: 80px;
+  }
+}
+
+.why-section__title {
+  @media (min-width: 768px) {
+    position: sticky;
+    top: 0;
+  }
+
+  @media (max-width: 767px) {
+    border-bottom: 1px solid black;
+  }
+}
+
+.why-section__block {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.why-section__block-title {
+    margin-bottom: 16px;
+}
