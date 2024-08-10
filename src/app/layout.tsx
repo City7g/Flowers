@@ -49,7 +49,7 @@ export default function RootLayout({
 
         <Footer />
 
-        <DialogMenu />
+        {/* <DialogMenu /> */}
 
         {/* <PopupResetPassword /> */}
       </body>

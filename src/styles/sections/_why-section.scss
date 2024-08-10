@@ -1,4 +1,6 @@
 .why-section {
+  border-bottom: 1px solid #000;
+
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -27,10 +29,15 @@
 }
 
 .why-section__block {
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
+  @media (min-width: 767px) {
+    border-left: 1px solid black;
+  }
+}
+
+.why-section__block + .why-section__block {
+  border-top: 1px solid black;
 }
 
 .why-section__block-title {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
