@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   color: black;
   background: white;
 
@@ -13,7 +14,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: 100%;
     z-index: 101;
     pointer-events: none;
     border: 1px solid #000;
@@ -38,4 +39,8 @@ button {
 input {
   border-radius: 0;
   font-family: inherit;
+}
+
+ul {
+  list-style: none;
 }
