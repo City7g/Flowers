@@ -47,6 +47,10 @@ export default function RootLayout({
 
         {children}
 
+        <Footer />
+
+        <DialogMenu />
+
         {/* <PopupResetPassword /> */}
       </body>
     </html>
