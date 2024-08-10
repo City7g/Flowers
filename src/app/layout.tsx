@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import '../styles/main.scss'
 import Header from '@/components/Header/Main'
+import PopupResetPassword from '@/components/Popup/ResetPassword'
 
 const gilroy = localFont({
   src: [
@@ -42,7 +43,10 @@ export default function RootLayout({
     <html lang="en" className={gilroy.className}>
       <body>
         <Header />
+
         {children}
+
+        {/* <PopupResetPassword /> */}
       </body>
     </html>
   )

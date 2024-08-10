@@ -1,6 +1,5 @@
 .s-base {
-  border: 1px solid #000;
-  // border-bottom-width: 0;
+  border-bottom: 1px solid #000;
 
   @media (min-width: 768px) {
     display: grid;

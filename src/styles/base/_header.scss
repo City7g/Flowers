@@ -1,8 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #000;
-  border-bottom-width: 0;
+  border-bottom: 1px solid #000;
 
   @media (min-width: 1200px) {
     display: grid;
