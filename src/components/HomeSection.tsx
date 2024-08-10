@@ -32,11 +32,13 @@ export default function HomeSection() {
         <div className="home-section">
           <div className="home-section__main">
             <div className="home-section__header">
-                <h1 className="home-section__title title-h1">Kyiv <br /> LuxeBouquets</h1>
-                <p className="home-sectoin__text text-subtitle">
-                  Discover Uniquely Crafted Bouquets and Gifts for Any Occasion:
-                  Spread Joy with Our Online Flower Delivery Service
-                </p>
+              <h1 className="home-section__title title-h1">
+                Kyiv <br /> LuxeBouquets
+              </h1>
+              <p className="home-sectoin__text text-subtitle">
+                Discover Uniquely Crafted Bouquets and Gifts for Any Occasion:
+                Spread Joy with Our Online Flower Delivery Service
+              </p>
             </div>
             <div className="home-section__footer">
               <div className="home-section__image">
@@ -48,7 +50,7 @@ export default function HomeSection() {
                   height={300}
                 />
               </div>
-              <p className="home-section__footer-text text-caption">
+              <p className="text-caption home-section__footer-text">
                 Experience the joy of giving with our modern floral studio.
                 Order online and send fresh flowers, plants and gifts today.
               </p>

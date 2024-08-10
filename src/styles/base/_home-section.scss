@@ -49,6 +49,10 @@
         }
     }
 
+    &__text {
+        opacity: 0.9;
+    }
+
     &__footer {
         grid-row: 2 / 3;
         display: grid;
