@@ -1,0 +1,57 @@
+.shop-now-btn {
+  color: black;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &::after {
+    content: "";
+    background-image: url("/icons/arrow-right.svg");
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    text-decoration: underline;
+
+    &::after {
+      transform: translateX(8px);
+    }
+  }
+
+  &--reverse {
+    &::after {
+        display: none;
+    }
+
+    &::before {
+      content: "";
+      background-image: url("/icons/arrow-left.svg");
+      display: block;
+      width: 24px;
+      height: 24px;
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      &::before {
+        transform: translateX(-8px);
+      }
+    }
+  }
+}
