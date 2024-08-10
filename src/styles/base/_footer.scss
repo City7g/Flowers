@@ -1,0 +1,37 @@
+.footer {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer__form,
+.footer__column {
+  padding: 40px 12px;
+
+  @media (min-width: 768px) {
+    padding: 40px;
+  }
+}
+
+.footer__column {
+  @media (max-width: 767px) {
+    border-top: 1px solid #000;
+  }
+
+  @media (min-width: 1200px) {
+    border-left: 1px solid #000;
+  }
+}
+
+.footer__form-text {
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
