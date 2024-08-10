@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import '../styles/main.scss'
-import Header from '@/components/Header'
+import Header from '@/components/Header/Main'
 
 const gilroy = localFont({
   src: [

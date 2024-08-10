@@ -1,0 +1,50 @@
+.header {
+  border: 1px solid #000;
+  border-bottom-width: 0;
+}
+
+.burger {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.burger span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+  transition: 0.3s ease;
+
+  &:nth-child(1) {
+    transition-property: transform;
+    transform: translate(-50%, calc(50% - 5px));
+  }
+
+  &:nth-child(2) {
+    transition-property: opacity;
+    transform: translate(-50%, 50%);
+  }
+
+  &:nth-child(3) {
+    transition-property: transform;
+    transform: translate(-50%, calc(50% + 5px));
+  }
+}
+
+.burger.active span {
+  &:nth-child(1) {
+    transform: translate(-50%, 50%) rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+  }
+
+  &:nth-child(3) {
+    transform: translate(-50%, 50%) rotate(-45deg);
+  }
+}
