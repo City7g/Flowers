@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import GoodCard from './GoodCard';
-import './../styles/base/_home-section.scss'
-import './../styles/base/_fonts.scss'
+import './../styles/base/_home-section.scss';
+import './../styles/base/_fonts.scss';
 
 export default function HomeSection() {
     const cards = [
