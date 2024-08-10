@@ -26,6 +26,16 @@
   @media (min-width: 1200px) {
     border-left: 1px solid #000;
   }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    &:nth-child(even) {
+      border-left: 1px solid #000;
+    }
+
+    &:nth-child(n + 3) {
+      border-top: 1px solid #000;
+    }
+  }
 }
 
 .footer__form-text {
@@ -34,4 +44,44 @@
   @media (min-width: 768px) {
     margin-bottom: 24px;
   }
+}
+
+.footer__title {
+  margin-bottom: 16px;
+  color: #808080;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.footer__list li + li {
+  margin-top: 8px;
+}
+
+.footer__title ~ .footer__title,
+.footer__list + .footer__list {
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    margin-top: 24px;
+  }
+}
+
+.footer__subtitle {
+  margin-bottom: 8px;
+  color: #808080;
+}
+
+.footer__link {
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  gap: 32px;
 }
