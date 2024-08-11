@@ -1,0 +1,9 @@
+.text-section {
+  padding: 40px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+
+  @media (min-width: 768px) {
+    padding: 80px;
+  }
+}
