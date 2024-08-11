@@ -7,6 +7,10 @@
   margin-bottom: 12px;
 }
 
+.form__input + .form__input {
+  margin-top: 12px;
+}
+
 .form__button {
   margin-top: 16px;
 }

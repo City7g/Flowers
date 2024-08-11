@@ -1,0 +1,36 @@
+.checkout {
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.checkout__forms {
+  padding: 40px 16px;
+
+  @media (min-width: 768px) {
+    padding: 40px 80px;
+  }
+}
+
+.checkout__breadcrumbs {
+  margin-bottom: 32px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.checkout__info {
+  padding: 24px 16px;
+  margin-bottom: 24px;
+  background: #d2d2d7;
+
+  @media (min-width: 768px) {
+    padding: 40px;
+  }
+}
+
+.checkout__title {
+  margin-bottom: 40px;
+}
