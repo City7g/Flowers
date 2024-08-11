@@ -1,4 +1,8 @@
-const buttons = {
+type buttonsObject = {
+  [key: string]: string
+}
+
+const buttons: buttonsObject = {
   'btn-primary': 'Primary',
   'btn-secondary': 'Secondary',
   'btn-tertiary': 'Tertiary',
