@@ -1,6 +1,6 @@
-import HomeSection from "@/components/HomeSection";
-import IndexAbout from "@/components/Index/About";
-import IndexWhy from "@/components/Index/Why";
+import HomeSection from '@/components/HomeSection'
+import IndexAbout from '@/components/Index/About'
+import IndexWhy from '@/components/Index/Why'
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <IndexAbout />
       <IndexWhy />
     </main>
-  );
+  )
 }

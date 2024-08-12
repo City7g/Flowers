@@ -1,0 +1,41 @@
+input[type='radio'] {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: #d2d2d7;
+  border: 1px solid #000;
+  border-radius: 50%;
+  appearance: none;
+  transition: 0.3s ease;
+  transition-property: box-shadow, border-color;
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: 1px solid #000;
+    outline-offset: 0px;
+  }
+
+  &:disabled {
+    border-color: rgba(#dee2e6, 0.5);
+    cursor: not-allowed;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: transparent;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.3s all ease;
+  }
+
+  &:checked::after {
+    background-color: #000;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
