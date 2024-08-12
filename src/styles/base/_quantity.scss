@@ -1,0 +1,40 @@
+.quantity {
+  display: inline-flex;
+  border: 1px solid #000;
+}
+
+.quantity__value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  flex-grow: 1;
+}
+
+.quantity__button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+
+  &:first-child {
+    border-right: 1px solid #000;
+  }
+
+  &:last-child {
+    border-left: 1px solid #000;
+  }
+}
+
+.quantity__button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 1px;
+  background-color: #000;
+  transform: translate(-50%, -50%);
+
+  &:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}

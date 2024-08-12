@@ -15,9 +15,9 @@ export default function IndexAbout() {
           are collected by our florists in exquisite bouquets. We have a
           collection of fresh bouquets, collections of dried bouquets, house
           plants, as well as fragrant candles from luxury brands to create the
-          perfect atmosphere. Make someone's day amazing by sending flowers,
-          plants and gifts the same or next day. Ordering flowers online has
-          never been easier.
+          perfect atmosphere. Make someone&apos;s day amazing by sending
+          flowers, plants and gifts the same or next day. Ordering flowers
+          online has never been easier.
         </p>
         <p className="s-base__button">Lern more</p>
       </div>
