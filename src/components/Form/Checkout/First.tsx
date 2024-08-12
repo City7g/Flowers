@@ -42,7 +42,7 @@ export default function FormCheckoutFirst() {
         placeholder="Your Phone number *"
       />
 
-      <button className="btn-primary form__button">Remind</button>
+      <button className="btn-primary form__button">Continue to shipping</button>
     </form>
   )
 }
