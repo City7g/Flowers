@@ -43,11 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={gilroy.className}>
       <body>
-        {/* <Header /> */}
+        <Header />
 
         {children}
 
-        {/* <Footer /> */}
+        <Footer />
 
         {/* <DialogMenu /> */}
 
