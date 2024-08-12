@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useModal } from '@/store/modal'
 import IconInstagram from '../Icon/Socials/Instagram'
 import IconPinterest from '../Icon/Socials/Pinterest'
 import IconFacebook from '../Icon/Socials/Facebook'
@@ -7,6 +10,10 @@ import IconTelegram from '../Icon/Socials/Telegram'
 import Burger from '../Header/Burger'
 
 export default function DialogMenu() {
+  const { modal } = useModal()
+
+  if (modal !== 'menu') return null
+
   return (
     <div className="dialog">
       <div className="dialog__content">

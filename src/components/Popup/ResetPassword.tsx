@@ -1,6 +1,13 @@
+'use client'
+
+import { useModal } from '@/store/modal'
 import FormResetPassword from '../Form/ResetPassword'
 
 export default function PopupResetPassword() {
+  const { modal } = useModal()
+
+  if (modal !== 'reset') return null
+
   return (
     <div className="popup">
       <div className="popup__content">
