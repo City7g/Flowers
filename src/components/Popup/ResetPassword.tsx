@@ -4,12 +4,17 @@ import { useModal } from '@/store/modal'
 import FormResetPassword from '../Form/ResetPassword'
 
 export default function PopupResetPassword() {
-  const { modal } = useModal()
+  const { modal, closeModal } = useModal()
 
-  if (modal !== 'reset') return null
+  const handleClick = (e) => {
+    if (e.target === e.currentTarget) closeModal()
+  }
 
   return (
-    <div className="popup">
+    <div
+      onClick={handleClick}
+      className={`popup ${modal === 'reset' ? 'show' : ''}`}
+    >
       <div className="popup__content">
         <h1 className="title-h2 popup__title">Reset your password</h1>
         <p className="title-h6 popup__text">
