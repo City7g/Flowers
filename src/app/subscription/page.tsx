@@ -24,6 +24,44 @@ const faq = [
   'Can I suspend my subscription to flowers ?',
 ]
 
+const plans = [
+  {
+    id: 0,
+    name: 'Classic',
+    benefits: [
+      'Price $45',
+      'Free Delivery',
+      'Best for a budget',
+      'Glass vase with first delivery',
+      'Save up to 25%',
+    ],
+  },
+  {
+    id: 1,
+    name: 'Seasonal',
+    benefits: [
+      'Price $65',
+      'Free Delivery',
+      'Best seasonal selections',
+      'Glass vase with first delivery',
+      'Luxury candle with your first delivery',
+      'Save up to 28%',
+    ],
+  },
+  {
+    id: 2,
+    name: 'Luxe',
+    benefits: [
+      'Price $95',
+      'Free Delivery',
+      'Premium arrangement',
+      'Premium vase with first delivery',
+      'Luxury candle with your first delivery',
+      'Save up to 30%',
+    ],
+  },
+]
+
 export default function Subscription() {
   return (
     <main>
@@ -90,7 +128,51 @@ export default function Subscription() {
         </div>
       </section>
 
-      <section className="plans"></section>
+      <section className="plans">
+        <div className="plans__content">
+          <h3 className="text-overline plans__subtitle">
+            Build Your Subscription
+          </h3>
+          <h2 className="title-h3 plans__title">Selecting a Plan</h2>
+          <p className="text-body plans__text">
+            Enjoy free shipping on every order and save up to 30%. Every bouquet
+            we deliver is carefully curated to ensure it arrives fresh and
+            stunning. To modify, pause, or cancel your subscription, simply log
+            in to your account dashboard. You&apos;re in complete control of
+            your flower delivery experience.
+          </p>
+
+          {plans.map((item) => (
+            <div key={item.id} className="plan">
+              <div className="plan__top">
+                <img
+                  src={`/plans/plan-${item.id + 1}.jpg`}
+                  alt=""
+                  className="plan__img"
+                />
+
+                <div className="plan__content">
+                  <h4 className="text-subtitle plan__name">{item.name}</h4>
+
+                  <ul className="plan__list">
+                    {item.benefits.map((benefit) => (
+                      <li key={benefit}>{benefit}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <button className="btn-primary plan__btn">Select</button>
+            </div>
+          ))}
+
+          <button className="btn-primary plans__btn">Checkout</button>
+        </div>
+
+        <div className="plans__image">
+          <img src="/plans.jpg" alt="" className="plans__img" />
+        </div>
+      </section>
 
       <section className="faq">
         <div className="faq__block">
