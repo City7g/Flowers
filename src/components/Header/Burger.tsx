@@ -1,15 +1,14 @@
 'use client'
-import { useState } from 'react'
 
-export default function Burger({ close }) {
-  const [isActive, setIsActive] = useState(false)
+import { useModal } from '@/store/modal'
+
+export default function Burger({ close = false }) {
+  const { modal, openModal } = useModal()
 
   return (
     <button
-      onClick={() => setIsActive(!isActive)}
-      className={`burger${isActive ? ' active' : ''}${
-        close ? ' burger--close' : ''
-      }`}
+      onClick={() => openModal('menu')}
+      className={`burger${modal ? ' active' : ''}`}
     >
       <span></span>
       <span></span>

@@ -5,7 +5,7 @@ import IconBag from '../Icon/Bag'
 import Burger from './Burger'
 
 export default function Header() {
-  const { openModal } = useModal()
+  const { modal, openModal } = useModal()
 
   return (
     <header className="header">
@@ -14,11 +14,15 @@ export default function Header() {
       <p onClick={() => openModal('reset')} className="header__link">
         Sing in
       </p>
-      <p className="header__link">Cart</p>
+      <p onClick={() => openModal('cart')} className="header__link">
+        Cart
+      </p>
 
-      <Burger />
+      <div onClick={() => openModal('menu')} className="header__burger">
+        <Burger />
+      </div>
 
-      <div className="bag">
+      <div onClick={() => openModal('cart')} className="bag">
         <IconBag />
       </div>
     </header>

@@ -26,6 +26,10 @@
   }
 }
 
+body:has(.popup.show) {
+  overflow: hidden;
+}
+
 .popup__content {
   display: flex;
   flex-direction: column;
@@ -37,15 +41,14 @@
   background: #fff;
   transition-duration: 0.3s;
   transition-behavior: allow-discrete;
+  opacity: 0;
+  transform: translateY(150px);
 
   @media (min-width: 768px) {
     width: 50%;
     margin: 0 auto;
     padding: 80px 80px 40px;
   }
-
-  opacity: 0;
-  transform: translateY(50px);
 }
 
 .popup.show .popup__content {
@@ -54,7 +57,7 @@
 
   @starting-style {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(150px);
   }
 }
 
