@@ -45,4 +45,9 @@
 
 .service__text {
   margin-bottom: 64px;
+  color: rgba(#121212, 0.9);
+
+  &--white {
+    color: #fff;
+  }
 }

@@ -1,0 +1,88 @@
+.slider-section {
+  padding: 40px 16px;
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+
+  @media (min-width: 768px) {
+    padding: 80px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    &::before {
+      content: 'Reviews';
+      display: block;
+      width: 77px;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding-top: 40px;
+      
+      background-image: url('./../../../public/Slider/google-logo.svg');
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 64px;
+
+    @media (min-width: 768px) {
+      width: auto;
+    }
+  }
+}
+
+.swiper-wrapper {
+  @media (min-width: 1200px) {
+    padding-bottom: 38px;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    padding-inline: 56px;
+  }
+}
+
+.slide__text {
+    margin-bottom: 16px;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.2;
+    color: rgba(#121212, 0.9);
+
+    @media (min-width: 768px) {
+      font-size: 28px;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+
+  &::after {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #808080;
+}
