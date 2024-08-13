@@ -1,3 +1,5 @@
+import Accordion from '@/components/Accordion'
+
 const content = [
   {
     title: 'Choose a plan',
@@ -88,26 +90,13 @@ export default function Subscription() {
         </div>
       </section>
 
+      <section className="plans"></section>
+
       <section className="faq">
         <div className="faq__block">
           <h3 className="title-h2 faq__block-title">Subscription FAQ</h3>
 
-          <div className="accordion faq__block-accordion">
-            {faq.map((item) => (
-              <div key={item} className="accordion__item">
-                <h4 className="title-h4 accordion__title">{item}</h4>
-                <div className="accordion__content">
-                  <p className="text-body accordion__text">
-                    Our subscriptions allow you to select a delivery frequency
-                    that best suits your needs - either weekly, bi-weekly, or
-                    monthly. You can also choose the number of deliveries for
-                    your subscription. Choose any combination that works for
-                    you!
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Accordion content={faq} />
         </div>
       </section>
     </main>

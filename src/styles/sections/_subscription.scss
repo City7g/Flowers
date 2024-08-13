@@ -1,4 +1,5 @@
 .subscription {
+  display: none !important;
   border-bottom: 1px solid #000;
 
   @media (min-width: 1200px) {
@@ -100,26 +101,5 @@
 
   @media (min-width: 768px) {
     margin-bottom: 40px;
-  }
-}
-
-.accordion__item {
-  padding: 16px 0;
-  border-bottom: 1px solid #000;
-
-  @media (min-width: 768px) {
-    padding: 24px 0;
-  }
-}
-
-.accordion__text {
-  color: rgba(#121212, 0.9);
-}
-
-.accordion__content {
-  padding-top: 16px;
-
-  @media (min-width: 768px) {
-    padding-top: 24px;
   }
 }
