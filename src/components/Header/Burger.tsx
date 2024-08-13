@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-export default function Burger({ close }) {
+export default function Burger({ close = false }) {
   const [isActive, setIsActive] = useState(false)
 
   return (

@@ -14,9 +14,13 @@ export default function Header() {
       <p onClick={() => openModal('reset')} className="header__link">
         Sing in
       </p>
-      <p className="header__link">Cart</p>
+      <p onClick={() => openModal('cart')} className="header__link">
+        Cart
+      </p>
 
-      <Burger />
+      <div onClick={() => openModal('menu')} className="header__burger">
+        <Burger />
+      </div>
 
       <div className="bag">
         <IconBag />

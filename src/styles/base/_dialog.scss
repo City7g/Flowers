@@ -5,14 +5,43 @@
   right: 0;
   bottom: 0;
   z-index: 100;
-  backdrop-filter: blur(1px);
+  display: none;
+  transition-duration: 0.3s;
+  transition-behavior: allow-discrete;
+  opacity: 0;
+
+  @media (min-width: 768px) {
+    backdrop-filter: blur(3px);
+  }
+}
+
+.dialog.show {
+  display: block;
+  opacity: 1;
+
+  @starting-stile {
+    opacity: 0;
+  }
 }
 
 .dialog__content {
   display: flex;
   flex-direction: column;
+  width: 50%;
   height: 100%;
+  margin-left: auto;
   background-color: #fff;
+  transform: translateX(50%);
+  transition-duration: 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+.dialog.show .dialog__content {
+  transform: translateX(0);
+
+  @starting-stile {
+    transform: translateX(50%);
+  }
 }
 
 .dialog__top {
