@@ -5,7 +5,7 @@ import IconBag from '../Icon/Bag'
 import Burger from './Burger'
 
 export default function Header() {
-  const { openModal } = useModal()
+  const { modal, openModal } = useModal()
 
   return (
     <header className="header">
@@ -22,7 +22,7 @@ export default function Header() {
         <Burger />
       </div>
 
-      <div className="bag">
+      <div onClick={() => openModal('cart')} className="bag">
         <IconBag />
       </div>
     </header>

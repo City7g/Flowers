@@ -1,7 +1,7 @@
 'use client'
 
 import { useModal } from '@/store/modal'
-import Burger from '../Header/Burger'
+import Close from '../Header/Close'
 
 export default function DialogCart() {
   const { modal, closeModal } = useModal()
@@ -13,23 +13,44 @@ export default function DialogCart() {
   return (
     <div
       onClick={handleClick}
-      className={`dialog ${modal === 'card' ? 'show' : ''}`}
+      className={`dialog ${modal === 'cart' ? 'show' : ''}`}
     >
       <div className="dialog__content">
-        <div className="dialog__top">
-          <Burger close={true} />
+        <div className="dialog__header">
+          <p className="title-h6">Shopping Cart</p>
+
+          <Close onClick={() => closeModal()} />
         </div>
-        asd
-        <p className="title-h5 dialog__link">Sign in</p>
-        <p className="title-h5 dialog__link">Shop</p>
-        <p className="title-h5 dialog__link">Servise</p>
-        <p className="title-h5 dialog__link">Contact</p>
-        <p className="title-h5 dialog__link">About us</p>
-        <div className="dialog__list">
-          <p className="text-link dialog__item">Shipping & returns</p>
-          <p className="text-link dialog__item">Terms & conditions</p>
-          <p className="text-link dialog__item">Terms & conditions</p>
+
+        <div className="dialog__items">
+          <div className="dialog__item">
+            <img src="/checkout.jpg" alt="" className="dialog__item-img" />
+
+            <div className="dialog__item-info">
+              <p className="text-subtitle">Rosy Delight</p>
+              <p className="text-body">Quantity (1)</p>
+              <p className="text-subtitle">$100</p>
+            </div>
+
+            <div className="dialog__item-remove">Remove</div>
+          </div>
         </div>
+
+        <div className="dialog__total">
+          <p className="text-subtitle">Subtotal</p>
+          <p className="title-h5">$100.00</p>
+        </div>
+
+        <div className="dialog__message">
+          <textarea placeholder="Gift Message"></textarea>
+        </div>
+
+        <p className="text-caption dialog__banner">
+          Shipping & taxes calculated at checkout Free standard shipping within
+          Kyiv
+        </p>
+
+        <div className="btn-primary dialog__btn">Check out</div>
       </div>
     </div>
   )

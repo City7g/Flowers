@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #000 #fff;
+}
+
 body {
   position: relative;
   color: black;
