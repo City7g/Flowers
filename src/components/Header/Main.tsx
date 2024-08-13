@@ -5,20 +5,24 @@ import IconBag from '../Icon/Bag'
 import Burger from './Burger'
 
 export default function Header() {
-  const { modal, openModal } = useModal()
+  const { modal, openModal, closeModal } = useModal()
+
+  const toggleModal = () => {
+    modal ? closeModal() : openModal('menu')
+  }
 
   return (
     <header className="header">
       <p className="header__link">Shop</p>
       <p className="header__link">Contact</p>
-      <p onClick={() => openModal('reset')} className="header__link">
+      <p onClick={() => openModal('signin')} className="header__link">
         Sing in
       </p>
       <p onClick={() => openModal('cart')} className="header__link">
         Cart
       </p>
 
-      <div onClick={() => openModal('menu')} className="header__burger">
+      <div onClick={toggleModal} className="header__burger">
         <Burger />
       </div>
 

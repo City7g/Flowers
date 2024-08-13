@@ -43,11 +43,19 @@ body:has(.popup.show) {
   transition-behavior: allow-discrete;
   opacity: 0;
   transform: translateY(150px);
+  overflow: auto;
 
   @media (min-width: 768px) {
-    width: 50%;
     margin: 0 auto;
     padding: 80px 80px 40px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 62.5%;
+  }
+
+  @media (min-width: 1400px) {
+    width: 50%;
   }
 }
 
@@ -88,4 +96,17 @@ body:has(.popup.show) {
   position: relative;
   padding: 0 12px;
   background-color: #fff;
+}
+
+.popup__login-text {
+  margin-bottom: 12px;
+}
+
+.popup__login-btns {
+  display: grid;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -19,14 +19,17 @@ export default function DialogMenu() {
   return (
     <div
       onClick={handleClick}
-      className={`dialog ${modal === 'menu' ? 'show' : ''}`}
+      className={`dialog dialog--left ${modal === 'menu' ? 'show' : ''}`}
     >
       <div className="dialog__content">
         <div className="dialog__header">
           <Close onClick={closeModal} />
         </div>
 
-        <p onClick={() => openModal('reset')} className="title-h5 dialog__link">
+        <p
+          onClick={() => openModal('signin')}
+          className="title-h5 dialog__link"
+        >
           Sign in
         </p>
         <p className="title-h5 dialog__link">Shop</p>

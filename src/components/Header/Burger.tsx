@@ -8,7 +8,7 @@ export default function Burger({ close = false }) {
   return (
     <button
       onClick={() => openModal('menu')}
-      className={`burger${modal ? ' active' : ''}`}
+      className={`burger ${modal === 'menu' ? 'active' : ''}`}
     >
       <span></span>
       <span></span>

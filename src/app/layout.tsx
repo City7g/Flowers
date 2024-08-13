@@ -6,6 +6,7 @@ import DialogMenu from '@/components/Dialog/Menu'
 import Footer from '@/components/Footer'
 import PopupResetPassword from '@/components/Popup/ResetPassword'
 import DialogCart from '@/components/Dialog/Cart'
+import PopupSignIn from '@/components/Popup/SignIn'
 
 const gilroy = localFont({
   src: [
@@ -55,6 +56,7 @@ export default function RootLayout({
         <DialogCart />
 
         <PopupResetPassword />
+        <PopupSignIn />
       </body>
     </html>
   )
