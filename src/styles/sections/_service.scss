@@ -1,0 +1,31 @@
+.service__flower-block {
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.service__flower-img {
+  height: 50vh;
+  object-fit: cover;
+
+  @media (min-width: 470px) {
+    width: 100%;
+    object-position: top;
+  }
+
+  @media (min-width: 1200px) {
+    height: 100%;
+  }
+}
+
+.service__wedding-block {
+  background-image: url("/ServiceSection/service-bg.png");
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-width: 1200px) {
+    height: 100vh;
+    background-attachment: fixed;
+  }
+}
