@@ -6,10 +6,10 @@ export default function GoodCard({ imgSrc, title, reverse }) {
   return (
     <div className={`good-card ${reverse ? 'good-card--reverse' : ''}`}>
       <div className="good-card__content">
-        <h3 className="good-card__title title-h3">{title}</h3>
+        <h3 className="title-h3 good-card__title">{title}</h3>
         <ShopNow reverse={reverse} />
       </div>
-      
+
       <div className="good-card__image">
         <Image
           src={imgSrc}

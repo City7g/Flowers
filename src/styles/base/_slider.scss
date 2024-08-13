@@ -7,44 +7,37 @@
   @media (min-width: 768px) {
     padding: 80px;
   }
+}
 
-  &__title {
-    margin-bottom: 16px;
-    text-align: center;
+.slider-section__subtitle {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+.slider-section__title {
+  margin-bottom: 16px;
+}
 
-    &::before {
-      content: 'Reviews';
-      display: block;
-      width: 77px;
-      font-size: 12px;
-      text-transform: uppercase;
-      padding-top: 40px;
-      
-      background-image: url('./../../../public/Slider/google-logo.svg');
-      background-repeat: no-repeat;
-      background-position: top;
-    }
+.slider-section__btn {
+  width: 100%;
+  margin-top: 64px;
+
+  @media (min-width: 768px) {
+    width: auto;
   }
+}
 
-  &__btn {
-    width: 100%;
-    margin-top: 64px;
+.swiper {
+  padding-bottom: 25px;
 
-    @media (min-width: 768px) {
-      width: auto;
-    }
+  @media (min-width: 1200px) {
+    padding-bottom: 50px;
   }
 }
 
 .swiper-wrapper {
-  @media (min-width: 1200px) {
-    padding-bottom: 38px;
-  }
+  display: flex;
+  align-items: center;
 }
 
 .swiper-slide {
@@ -56,15 +49,15 @@
 }
 
 .slide__text {
-    margin-bottom: 16px;
-    font-style: italic;
-    font-size: 22px;
-    line-height: 1.2;
-    color: rgba(#121212, 0.9);
+  margin-bottom: 16px;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.2;
+  color: rgba(#121212, 0.9);
 
-    @media (min-width: 768px) {
-      font-size: 28px;
-    }
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 .swiper-button-next,
@@ -81,6 +74,10 @@
   .swiper-button-prev {
     display: none;
   }
+}
+
+.slider-section .swiper-pagination {
+  bottom: 0px;
 }
 
 .swiper-pagination-bullet {
