@@ -42,7 +42,7 @@ body:has(.popup.show) {
   transition-duration: 0.3s;
   transition-behavior: allow-discrete;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(150px);
 
   @media (min-width: 768px) {
     width: 50%;
@@ -57,7 +57,7 @@ body:has(.popup.show) {
 
   @starting-style {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(150px);
   }
 }
 

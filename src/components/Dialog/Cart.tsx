@@ -22,17 +22,17 @@ export default function DialogCart() {
           <Close onClick={() => closeModal()} />
         </div>
 
-        <div className="dialog__items">
-          <div className="dialog__item">
-            <img src="/checkout.jpg" alt="" className="dialog__item-img" />
+        <div className="dialog__cards">
+          <div className="dialog__card">
+            <img src="/checkout.jpg" alt="" className="dialog__card-img" />
 
-            <div className="dialog__item-info">
+            <div className="dialog__card-info">
               <p className="text-subtitle">Rosy Delight</p>
               <p className="text-body">Quantity (1)</p>
               <p className="text-subtitle">$100</p>
             </div>
 
-            <div className="dialog__item-remove">Remove</div>
+            <div className="dialog__card-remove">Remove</div>
           </div>
         </div>
 

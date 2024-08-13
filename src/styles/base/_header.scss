@@ -35,6 +35,7 @@
 }
 
 .header .burger {
+  display: block;
   border-right: 1px solid #000;
 
   @media (min-width: 1200px) {
