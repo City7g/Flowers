@@ -7,3 +7,21 @@
     padding: 80px;
   }
 }
+
+.text-section__subtitle {
+  margin-bottom: 24px;
+}
+
+.text-section__text {
+  margin-top: 16px;
+  color: rgba(#121212, 0.9);
+
+  @media (min-width: 1200px) {
+    max-width: 640px;
+    margin-inline: auto;
+  }
+}
+
+.text-section__btn {
+  margin-top: 56px;
+}

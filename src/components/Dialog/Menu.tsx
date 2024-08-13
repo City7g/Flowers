@@ -1,20 +1,37 @@
+'use client'
+
 import Link from 'next/link'
+import { useModal } from '@/store/modal'
 import IconInstagram from '../Icon/Socials/Instagram'
 import IconPinterest from '../Icon/Socials/Pinterest'
 import IconFacebook from '../Icon/Socials/Facebook'
 import IconTwitter from '../Icon/Socials/Twitter'
 import IconTelegram from '../Icon/Socials/Telegram'
-import Burger from '../Header/Burger'
+import Close from '../Header/Close'
 
 export default function DialogMenu() {
+  const { modal, openModal, closeModal } = useModal()
+
+  const handleClick = (e) => {
+    if (e.target === e.currentTarget) closeModal()
+  }
+
   return (
-    <div className="dialog">
+    <div
+      onClick={handleClick}
+      className={`dialog dialog--left ${modal === 'menu' ? 'show' : ''}`}
+    >
       <div className="dialog__content">
-        <div className="dialog__top">
-          <Burger close={true} />
+        <div className="dialog__header">
+          <Close onClick={closeModal} />
         </div>
 
-        <p className="title-h5 dialog__link">Sign in</p>
+        <p
+          onClick={() => openModal('signin')}
+          className="title-h5 dialog__link"
+        >
+          Sign in
+        </p>
         <p className="title-h5 dialog__link">Shop</p>
         <p className="title-h5 dialog__link">Servise</p>
         <p className="title-h5 dialog__link">Contact</p>

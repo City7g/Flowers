@@ -18,3 +18,16 @@ input {
     outline: 1px solid #808080;
   }
 }
+
+textarea {
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  border: none;
+  resize: none;
+
+  &:focus {
+    outline: 1px solid #000;
+  }
+}
