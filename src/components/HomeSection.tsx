@@ -1,7 +1,11 @@
+'use client'
+
 import Image from 'next/image'
 import GoodCard from './GoodCard'
 import './../styles/base/_home-section.scss'
-import './../styles/base/_fonts.scss'
+
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const cards = [
   {
@@ -27,6 +31,18 @@ const cards = [
 ]
 
 export default function HomeSection() {
+  gsap.registerPlugin(useGSAP)
+
+  useGSAP(() => {
+    gsap.from('.home-section__title', {
+      opacity: 0,
+      y: 100,
+      rotate: 20,
+      delay: 0.2,
+      duration: 0.6,
+    })
+  })
+
   return (
     <main>
       <div className="home-section">
