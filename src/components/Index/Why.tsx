@@ -1,3 +1,9 @@
+'use client'
+
+import { gsap, ScrollTrigger } from 'gsap/all'
+import { useGSAP } from '@gsap/react'
+import { useRef } from 'react'
+
 const content = [
   {
     title: 'Stylish bouquets by florists',
@@ -17,16 +23,39 @@ const content = [
   },
 ]
 
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger, useGSAP)
+}
+
 export default function Why() {
+  const container = useRef()
+
+  useGSAP(() => {
+    const texts = gsap.utils.toArray('.why-section__block-text')
+
+    texts.forEach((text) => {
+      gsap.from(text, {
+        opacity: 0,
+        duration: 0.5,
+        y: 100,
+        scrollTrigger: {
+          trigger: text,
+        },
+      })
+    })
+  })
+
   return (
-    <div className="why-section">
+    <div ref={container} className="why-section">
       <h2 className="title-h2 why-section__title">Why choose us ?</h2>
 
       <div className="why-section__blocks">
-        {content.map(item => (
+        {content.map((item) => (
           <div key={item.title} className="why-section__block">
             <h3 className="title-h3 why-section__block-title">{item.title}</h3>
-            <p className="text-body why-section__block-text">{item.text}</p>
+            <div className="why-section__block-text-wrap">
+              <p className="text-body why-section__block-text">{item.text}</p>
+            </div>
           </div>
         ))}
       </div>
