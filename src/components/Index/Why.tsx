@@ -31,13 +31,37 @@ export default function Why() {
   const container = useRef()
 
   useGSAP(() => {
+    const mainTitle = document.querySelector('.why-section__title')
+    const titles = gsap.utils.toArray('.why-section__block-title')
     const texts = gsap.utils.toArray('.why-section__block-text')
+
+    gsap.from(mainTitle, {
+      opacity: 0,
+      y: 100,
+      rotate: 10,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: mainTitle,
+      },
+    })
+
+    titles.forEach((title) => {
+      gsap.from(title, {
+        opacity: 0,
+        y: 100,
+        rotate: 10,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: title,
+        },
+      })
+    })
 
     texts.forEach((text) => {
       gsap.from(text, {
         opacity: 0,
-        duration: 0.5,
         y: 100,
+        duration: 0.5,
         scrollTrigger: {
           trigger: text,
         },
@@ -47,12 +71,19 @@ export default function Why() {
 
   return (
     <div ref={container} className="why-section">
-      <h2 className="title-h2 why-section__title">Why choose us ?</h2>
+      <div className="why-section__title-wrap">
+        <h2 className="title-h2 why-section__title">Why choose us ?</h2>
+      </div>
 
       <div className="why-section__blocks">
         {content.map((item) => (
           <div key={item.title} className="why-section__block">
-            <h3 className="title-h3 why-section__block-title">{item.title}</h3>
+            <div className="why-section__block-title-wrap">
+              <h3 className="title-h3 why-section__block-title">
+                {item.title}
+              </h3>
+            </div>
+
             <div className="why-section__block-text-wrap">
               <p className="text-body why-section__block-text">{item.text}</p>
             </div>
