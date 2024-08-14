@@ -64,6 +64,24 @@
   }
 }
 
+.subscription__text {
+  margin-bottom: 8px;
+}
+
+.subscription__list {
+  color: rgba(#121212, 0.9);
+}
+
+.subscription__list li {
+  margin-left: 20px;
+  padding-left: 5px;
+  list-style-type: disc;
+}
+
+.subscription__list + .subscription__text {
+  margin-top: 24px;
+}
+
 .subscription__btn {
   margin-top: 48px;
 
@@ -100,26 +118,5 @@
 
   @media (min-width: 768px) {
     margin-bottom: 40px;
-  }
-}
-
-.accordion__item {
-  padding: 16px 0;
-  border-bottom: 1px solid #000;
-
-  @media (min-width: 768px) {
-    padding: 24px 0;
-  }
-}
-
-.accordion__text {
-  color: rgba(#121212, 0.9);
-}
-
-.accordion__content {
-  padding-top: 16px;
-
-  @media (min-width: 768px) {
-    padding-top: 24px;
   }
 }

@@ -1,3 +1,6 @@
+import Accordion from '@/components/Accordion'
+import Quantity from '@/components/Quantity'
+
 const content = [
   {
     title: 'Choose a plan',
@@ -15,11 +18,49 @@ const content = [
 
 const faq = [
   'How often will I get a new bouquet?',
-  'Can i send subscription like as a gift ?',
-  'Can I choose which bouquet I get ?',
-  'Can I change the shipping address ?',
+  'Can i send subscription like as a gift?',
+  'Can I choose which bouquet I get?',
+  'Can I change the shipping address?',
   'What day will the subscription bouquet come?',
-  'Can I suspend my subscription to flowers ?',
+  'Can I suspend my subscription to flowers?',
+]
+
+const plans = [
+  {
+    id: 0,
+    name: 'Classic',
+    benefits: [
+      'Price $45',
+      'Free Delivery',
+      'Best for a budget',
+      'Glass vase with first delivery',
+      'Save up to 25%',
+    ],
+  },
+  {
+    id: 1,
+    name: 'Seasonal',
+    benefits: [
+      'Price $65',
+      'Free Delivery',
+      'Best seasonal selections',
+      'Glass vase with first delivery',
+      'Luxury candle with your first delivery',
+      'Save up to 28%',
+    ],
+  },
+  {
+    id: 2,
+    name: 'Luxe',
+    benefits: [
+      'Price $95',
+      'Free Delivery',
+      'Premium arrangement',
+      'Premium vase with first delivery',
+      'Luxury candle with your first delivery',
+      'Save up to 30%',
+    ],
+  },
 ]
 
 export default function Subscription() {
@@ -37,8 +78,8 @@ export default function Subscription() {
         <div className="subscription__content">
           <h1 className="title-h2 subscription__title">Flower Subscription</h1>
 
-          <p className="subscription__text">For Yourself</p>
-          <ul className="subscription__list">
+          <p className="title-h6 subscription__text">For Yourself</p>
+          <ul className="text-body subscription__list">
             <li>
               The perfect way to keep your home fresh and beautiful. Get a
               regular delivery of stunning bouquets straight to your doorstep
@@ -47,8 +88,8 @@ export default function Subscription() {
             </li>
           </ul>
 
-          <p className="subscription__text">As a Gift</p>
-          <ul className="subscription__list">
+          <p className="title-h6 subscription__text">As a Gift</p>
+          <ul className="text-body subscription__list">
             <li>
               Simply provide us with their address and let us take care of the
               rest, delivering beautiful blooms straight to their doorstep at
@@ -56,8 +97,8 @@ export default function Subscription() {
             </li>
           </ul>
 
-          <p className="subscription__text">For Business</p>
-          <ul className="subscription__list">
+          <p className="title-h6 subscription__text">For Business</p>
+          <ul className="text-body subscription__list">
             <li>
               Is a great way to create a pleasant atmosphere and leave a good
               impression on your guests and customers. Fresh floral arrangements
@@ -88,26 +129,84 @@ export default function Subscription() {
         </div>
       </section>
 
+      <section className="plans">
+        <div className="plans__content">
+          <h3 className="text-overline plans__subtitle">
+            Build Your Subscription
+          </h3>
+          <h2 className="title-h3 plans__title">Selecting a Plan</h2>
+          <p className="text-body plans__text">
+            Enjoy free shipping on every order and save up to 30%. Every bouquet
+            we deliver is carefully curated to ensure it arrives fresh and
+            stunning. To modify, pause, or cancel your subscription, simply log
+            in to your account dashboard. You&apos;re in complete control of
+            your flower delivery experience.
+          </p>
+
+          <div className="plans__plans">
+            {plans.map((item) => (
+              <div key={item.id} className="plan">
+                <div className="plan__top">
+                  <img
+                    src={`/plans/plan-${item.id + 1}.jpg`}
+                    alt=""
+                    className="plan__img"
+                  />
+
+                  <div className="plan__content">
+                    <h4 className="text-subtitle plan__name">{item.name}</h4>
+
+                    <ul className="plan__list">
+                      {item.benefits.map((benefit) => (
+                        <li key={benefit}>{benefit}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <button className="btn-primary plan__btn">Select</button>
+              </div>
+            ))}
+          </div>
+
+          <div className="plans__block">
+            <h3 className="title-h4 plans__heading">
+              How often do you want flowers delivered?
+            </h3>
+            <p className="text-body plans__text">
+              Select the delivery frequency
+            </p>
+            <div className="plans__btns">
+              <div className="btn-secondary">Monthly</div>
+              <div className="btn-secondary">Bi-Weekly</div>
+              <div className="btn-secondary">Weekly</div>
+            </div>
+          </div>
+
+          <div className="plans__block">
+            <h3 className="title-h4 plans__heading">
+              How many deliveries would you like ?
+            </h3>
+            <p className="text-body plans__text">
+              Pay once and do not worry about flowers, our bouquets will be
+              beautiful and on time, as many times as you need{' '}
+            </p>
+            <Quantity />
+          </div>
+
+          <button className="btn-primary plans__btn">Checkout</button>
+        </div>
+
+        <div className="plans__image">
+          <img src="/plans.jpg" alt="" className="plans__img" />
+        </div>
+      </section>
+
       <section className="faq">
         <div className="faq__block">
           <h3 className="title-h2 faq__block-title">Subscription FAQ</h3>
 
-          <div className="accordion faq__block-accordion">
-            {faq.map((item) => (
-              <div key={item} className="accordion__item">
-                <h4 className="title-h4 accordion__title">{item}</h4>
-                <div className="accordion__content">
-                  <p className="text-body accordion__text">
-                    Our subscriptions allow you to select a delivery frequency
-                    that best suits your needs - either weekly, bi-weekly, or
-                    monthly. You can also choose the number of deliveries for
-                    your subscription. Choose any combination that works for
-                    you!
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Accordion content={faq} />
         </div>
       </section>
     </main>
