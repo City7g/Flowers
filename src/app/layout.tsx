@@ -7,6 +7,16 @@ import Footer from '@/components/Footer'
 import PopupResetPassword from '@/components/Popup/ResetPassword'
 import DialogCart from '@/components/Dialog/Cart'
 import PopupSignIn from '@/components/Popup/SignIn'
+import { gsap, ScrollTrigger } from 'gsap/all'
+import { useGSAP } from '@gsap/react'
+
+if (typeof window !== 'undefined') {
+  console.log('layout')
+
+  gsap.registerPlugin(ScrollTrigger, useGSAP)
+} else {
+  console.log('layout 1')
+}
 
 const gilroy = localFont({
   src: [
