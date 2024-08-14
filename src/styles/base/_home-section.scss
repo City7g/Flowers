@@ -84,9 +84,10 @@
   border-right: 1px solid black;
 }
 
-.home-section__footer-text {
+.home-section__footer-text-wrap {
   margin-top: auto;
   padding-left: 24px;
+  overflow: hidden;
 }
 
 .home-section__goods {
