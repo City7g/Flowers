@@ -1,5 +1,4 @@
 .subscription {
-  display: none !important;
   border-bottom: 1px solid #000;
 
   @media (min-width: 1200px) {
@@ -63,6 +62,24 @@
   @media (min-width: 1200px) {
     margin-bottom: 24px;
   }
+}
+
+.subscription__text {
+  margin-bottom: 8px;
+}
+
+.subscription__list {
+  color: rgba(#121212, 0.9);
+}
+
+.subscription__list li {
+  margin-left: 20px;
+  padding-left: 5px;
+  list-style-type: disc;
+}
+
+.subscription__list + .subscription__text {
+  margin-top: 24px;
 }
 
 .subscription__btn {

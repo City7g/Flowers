@@ -1,17 +1,65 @@
 .plans {
   display: grid;
+  border-bottom: 1px solid #000;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     grid-template-columns: 50% 50%;
     align-items: flex-start;
   }
 }
 
+.plans__image {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  max-width: 100%;
+
+  @media (max-width: 1199px) {
+    order: -1;
+  }
+
+  @media (min-width: 768px) {
+    height: 500px;
+  }
+
+  @media (min-width: 1200px) {
+    aspect-ratio: 1;
+    height: auto;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: rgba(#121212, 0.25);
+    pointer-events: none;
+  }
+}
+
+.plans__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .plans__content {
   padding: 40px 16px;
 
+  @media (max-width: 1199px) {
+    border-top: 1px solid #000;
+  }
+
   @media (min-width: 768px) {
     padding: 80px 40px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-right: -1px;
+    border-right: 1px solid #000;
   }
 }
 
@@ -23,16 +71,40 @@
   margin-bottom: 16px;
 }
 
+.plans__heading {
+  margin-bottom: 16px;
+}
+
 .plans__text {
   margin-bottom: 24px;
 }
 
-.plans__btn {
-  width: 100%;
+.plans__plans {
+  margin-bottom: 40px;
 }
 
-.plans__image {
-  order: -1;
+.plans__btn {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.plans__block {
+  padding: 40px 0;
+  border-top: 1px solid #d2d2d7;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.plans__block + .plans__block {
+  border-top: none;
+}
+
+.plans__btns {
+  display: grid;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .plan {

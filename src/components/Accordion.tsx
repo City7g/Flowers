@@ -4,7 +4,7 @@ import { useState } from 'react'
 import IconArrow from './Icon/Arraw'
 
 export default function Accordion({ className = '', content }) {
-  const [active, setActive] = useState(null)
+  const [active, setActive] = useState(0)
 
   const changeActive = (index) => {
     active === index ? setActive(null) : setActive(index)

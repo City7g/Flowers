@@ -26,9 +26,9 @@ export default function Header() {
         <Burger />
       </div>
 
-      <div onClick={() => openModal('cart')} className="bag">
+      <button onClick={() => openModal('cart')} className="bag">
         <IconBag />
-      </div>
+      </button>
     </header>
   )
 }
