@@ -1,0 +1,41 @@
+.category-card {
+  position: relative;
+}
+
+.category-card + .category-card {
+  border-top: 1px solid #000;
+}
+
+.category-card:nth-child(even) {
+  @media (min-width: 768px) {
+    border-left: 1px solid #000;
+  }
+}
+
+.category-card:nth-child(2) {
+  @media (min-width: 768px) {
+    border-top: none;
+  }
+}
+
+.category-card__img {
+  display: block;
+  width: 100%;
+}
+
+.category-card__content {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.category-card__price {
+  font-weight: 500;
+  color: #808080;
+}
+
+.category-card__title {
+  margin-bottom: 4px;
+}
