@@ -3,6 +3,8 @@ import IndexAbout from '@/components/Index/About'
 import IndexContactUs from '@/components/Index/ContactUs'
 import IndexService from '@/components/Index/Service'
 import IndexSlider from '@/components/Index/Slider'
+import IndexText from '@/components/Index/Text'
+import IndexWedding from '@/components/Index/Wedding'
 import IndexWhy from '@/components/Index/Why'
 
 export default function Home() {
@@ -12,7 +14,9 @@ export default function Home() {
       <IndexAbout />
       <IndexWhy />
       <IndexContactUs />
+      <IndexText />
       <IndexService />
+      <IndexWedding />
       <IndexSlider />
     </main>
   )

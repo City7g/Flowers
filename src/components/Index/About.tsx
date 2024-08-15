@@ -63,9 +63,11 @@ export default function IndexAbout() {
       </div>
       <div className="s-base__right">
         <div className="s-base__subtitle-wrap">
-          <h4 className="text-overline s-base__subtitle">our story</h4>
+          <h4 className="text-overline s-base__subtitle">Our story</h4>
         </div>
+
         <h3 className="title-h3 s-base__heading">Kyiv LuxeBouquets</h3>
+
         <div className="s-base__text-wrap">
           <p className="text-body s-base__text">
             We are a modern local floral studio, which specializes in the design
@@ -80,7 +82,10 @@ export default function IndexAbout() {
             Ordering flowers online has never been easier.
           </p>
         </div>
-        <button className="btn-secondary s-base__button">Lern more</button>
+
+        <button className="btn-secondary s-base__button">
+          <span>Lern more</span>
+        </button>
       </div>
     </section>
   )
