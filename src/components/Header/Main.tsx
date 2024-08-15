@@ -1,6 +1,7 @@
 'use client'
 
 import { useModal } from '@/store/modal'
+import { usePathname } from 'next/navigation'
 import IconBag from '../Icon/Bag'
 import Burger from './Burger'
 import Link from 'next/link'
@@ -15,9 +16,15 @@ export default function Header() {
   return (
     <header className="header">
       <div className=" header__link">
-        <Link href="/shop" className="btn-anim">
-          <span>Shop</span>
-        </Link>
+        {usePathname() === '/category' ? (
+          <Link href="/" className="btn-anim">
+            <span>Home</span>
+          </Link>
+        ) : (
+          <Link href="/category" className="btn-anim">
+            <span>Shop</span>
+          </Link>
+        )}
       </div>
 
       <p className="header__link">Contact</p>
