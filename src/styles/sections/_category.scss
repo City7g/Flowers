@@ -17,9 +17,9 @@
       center/cover;
 
   @media (min-width: 1200px) {
-    aspect-ratio: 1;
     position: sticky;
     top: 0;
+    aspect-ratio: 1;
   }
 
   @media (max-width: 1199px) {
