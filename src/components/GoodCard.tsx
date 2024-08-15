@@ -16,7 +16,7 @@ export default function GoodCard({ imgSrc, title, reverse }) {
       trigger: card.current,
       animation: tl
         .from(card.current.querySelector('.good-card__image img'), {
-          scale: 1.2,
+          scale: 1.5,
           opacity: 0,
           duration: 0.6,
         })
@@ -24,9 +24,19 @@ export default function GoodCard({ imgSrc, title, reverse }) {
           card.current.querySelector('.good-card__title'),
           {
             opacity: 0,
-            y: 10,
+            y: 50,
           },
           0.3
+        )
+        .fromTo(
+          card.current.querySelector('.shop-now-btn'),
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+          },
+          0.5
         ),
     })
   })
