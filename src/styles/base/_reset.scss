@@ -35,6 +35,8 @@ a {
 button {
   border: none;
   cursor: pointer;
+  background-color: #fff;
+  font: inherit;
 
   &:disabled {
     cursor: not-allowed;
@@ -43,7 +45,7 @@ button {
 
 input {
   border-radius: 0;
-  font-family: inherit;
+  font: inherit;
 }
 
 ul {
