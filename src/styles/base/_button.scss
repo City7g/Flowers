@@ -17,6 +17,7 @@
   transition: 0.3s ease;
   transition-property: color, background, border;
   white-space: nowrap;
+  overflow: hidden;
 
   @media (min-width: 1200px) {
     font-size: 16px;
@@ -36,6 +37,19 @@
     color: #808080;
     border-color: #d2d2d7;
   }
+}
+
+.btn-primary:hover span,
+.btn-secondary:hover span,
+.btn-tertiary:hover span,
+.btn-anim:hover span {
+  display: inline-block;
+  animation: button-anim 0.5s;
+}
+
+.btn-anim {
+  overflow: hidden;
+  padding: 10px;
 }
 
 .btn-secondary {
@@ -79,5 +93,23 @@
     background: transparent;
     color: #d2d2d7;
     border-color: #808080;
+  }
+}
+
+@keyframes button-anim {
+  from {
+    transform: translateY(0);
+  }
+
+  49.9999% {
+    transform: translateY(250%);
+  }
+
+  50% {
+    transform: translateY(-250%);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }

@@ -5,6 +5,10 @@
   }
 }
 
+.service__flower-image {
+  overflow: hidden;
+}
+
 .service__flower-img {
   height: 50vh;
   object-fit: cover;
@@ -20,7 +24,7 @@
 }
 
 .service__wedding-block {
-  background-image: url("/ServiceSection/service-bg.png");
+  background-image: url('/ServiceSection/service-bg.png');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;

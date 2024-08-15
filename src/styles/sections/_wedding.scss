@@ -1,0 +1,39 @@
+.wedding {
+  color: #fff;
+  border-bottom: 1px solid #000;
+  background-image: url('/service-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wedding__content {
+  padding: 80px 16px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 100px 80px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 150px 80px;
+  }
+}
+
+.wedding__title {
+  margin-bottom: 16px;
+}
+
+.wedding__text {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.wedding__subtitle {
+  margin-bottom: 24px;
+}
+
+.wedding__btn {
+  margin-top: 64px;
+}
