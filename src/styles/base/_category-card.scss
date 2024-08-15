@@ -24,11 +24,11 @@
 }
 
 .category-card__content {
-  text-align: center;
   position: absolute;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
 }
 
 .category-card__price {
