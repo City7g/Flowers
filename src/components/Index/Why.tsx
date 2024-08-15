@@ -72,7 +72,7 @@ export default function Why() {
   return (
     <div ref={container} className="why-section">
       <div className="why-section__title-wrap">
-        <h2 className="title-h2 why-section__title">Why choose us ?</h2>
+        <h2 className="title-h2 why-section__title">Why choose us?</h2>
       </div>
 
       <div className="why-section__blocks">

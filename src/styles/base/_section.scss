@@ -1,7 +1,7 @@
 .s-base {
   border-bottom: 1px solid #000;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     display: grid;
     align-items: flex-start;
     grid-template-columns: repeat(2, 1fr);
@@ -15,21 +15,25 @@
   @media (min-width: 768px) {
     padding: 80px;
   }
+
+  // @media (min-width: 1200px) {
+  //   padding: 80px;
+  // }
 }
 
 .s-base__left {
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     position: sticky;
     top: 0;
   }
 }
 
 .s-base__right {
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     border-top: 1px solid #000;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     border-left: 1px solid #000;
   }
 }

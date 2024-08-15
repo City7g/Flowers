@@ -1,7 +1,7 @@
 .why-section {
   border-bottom: 1px solid #000;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: flex-start;
@@ -29,7 +29,11 @@
 }
 
 .why-section__block {
-  @media (min-width: 767px) {
+  @media (max-width: 1199px) {
+    border-top: 1px solid #000;
+  }
+
+  @media (min-width: 1200px) {
     border-left: 1px solid black;
   }
 }
