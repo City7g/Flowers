@@ -4,19 +4,23 @@ import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../Form/ContactForm'
+import IcomoonIcon from '../Icomoon'
+
+const socials = ['instagram', 'pinterest', 'facebook', 'twitter', 'telegram']
 
 export default function ContactUs() {
   const container = useRef()
 
   useGSAP(
     () => {
-      const mainTitle = document.querySelector('.contact-us__title')
-      const image = document.querySelector('.contact-us__img')
-      const text = document.querySelector('.contact-us__form-subtext')
-      const socials = document.querySelector('.contact-us__socials-links')
+      const mainTitle = container.current.querySelector('.contact-us__title')
+      const image = container.current.querySelector('.contact-us__img')
+      const text = container.current.querySelector('.contact-us__form-subtext')
+      const socials = container.current.querySelector(
+        '.contact-us__socials-links'
+      )
 
       gsap.from(mainTitle, {
         opacity: 0,
@@ -48,11 +52,18 @@ export default function ContactUs() {
 
       ScrollTrigger.create({
         trigger: socials,
-        animation: gsap.from(socials.querySelectorAll('a'), {
-          opacity: 0,
-          y: 20,
-          stagger: 0.05,
-        }),
+        animation: gsap.fromTo(
+          socials.querySelectorAll('a'),
+          {
+            opacity: 0,
+            y: 20,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.05,
+          }
+        ),
       })
     },
     {
@@ -75,46 +86,11 @@ export default function ContactUs() {
           <h3 className="title-h3 contact-us__socials-title">Follow us:</h3>
 
           <div className="contact-us__socials-links">
-            <Link href="#">
-              <Image
-                src="/icons/Instagram.svg"
-                alt="Instagram"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/icons/Pinterest.svg"
-                alt="Pinterest"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/icons/Facebook.svg"
-                alt="Facebook"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/icons/Twitter.svg"
-                alt="Twitter"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/icons/Telegram.svg"
-                alt="Telegram"
-                width={24}
-                height={24}
-              />
-            </Link>
+            {socials.map((social) => (
+              <Link key={social} href="#">
+                <IcomoonIcon icon={social} />
+              </Link>
+            ))}
           </div>
         </div>
       </div>

@@ -63,6 +63,14 @@
   padding: 8px 16px 16px 16px;
 }
 
+.contact-us__socials-links > a {
+  transition: 0.3s all ease;
+
+  &:hover {
+    color: rgba(#000, 0.6);
+  }
+}
+
 .contact-us__form-block {
   padding: 40px 16px;
 

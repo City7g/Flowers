@@ -8,26 +8,32 @@ import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
+import image1 from '../../public/HomeSection/good-card-1.jpg'
+import image2 from '../../public/HomeSection/good-card-2.jpg'
+import image3 from '../../public/HomeSection/good-card-3.jpg'
+import image4 from '../../public/HomeSection/good-card-4.jpg'
+import image5 from '../../public/HomeSection/good-card-5.jpg'
+
 const cards = [
   {
-    imgSrc: '/HomeSection/good-card-1.jpg',
     title: 'Fresh Flowers',
+    image: image1,
   },
   {
-    imgSrc: '/HomeSection/good-card-2.jpg',
     title: 'Dried Flowers',
+    image: image2,
   },
   {
-    imgSrc: '/HomeSection/good-card-3.jpg',
     title: 'Live Plants',
+    image: image3,
   },
   {
-    imgSrc: '/HomeSection/good-card-4.jpg',
     title: 'Aroma Candels',
+    image: image4,
   },
   {
-    imgSrc: '/HomeSection/good-card-5.jpg',
     title: 'Fresheners',
+    image: image5,
   },
 ]
 
@@ -109,7 +115,7 @@ export default function HomeSection() {
         {cards.map((card, index) => (
           <GoodCard
             key={index}
-            imgSrc={card.imgSrc}
+            image={card.image}
             title={card.title}
             reverse={index % 2 === 1}
           />
