@@ -32,10 +32,15 @@ export default function DialogMenu() {
         >
           Sign in
         </p>
-        <p className="title-h5 dialog__link">Shop</p>
-        <p className="title-h5 dialog__link">Servise</p>
-        <p className="title-h5 dialog__link">Contact</p>
-        <p className="title-h5 dialog__link">About us</p>
+        <Link href="/" className="title-h5 dialog__link">
+          Home
+        </Link>
+        <Link href="/category" className="title-h5 dialog__link">
+          Shop
+        </Link>
+        <Link href="/about" className="title-h5 dialog__link">
+          About us
+        </Link>
 
         <div className="dialog__list">
           <p className="text-link dialog__item">Shipping & returns</p>
