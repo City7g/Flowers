@@ -4,12 +4,7 @@ import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import Link from 'next/link'
-import IconFacebook from '@/components/Icon/Socials/Facebook'
-import IconInstagram from '@/components/Icon/Socials/Instagram'
-import IconPinterest from '@/components/Icon/Socials/Pinterest'
-import IconTelegram from '@/components/Icon/Socials/Telegram'
-import IconTwitter from '@/components/Icon/Socials/Twitter'
+import Socials from '../Socials'
 
 export default function AboutFirst() {
   const container = useRef()
@@ -35,12 +30,19 @@ export default function AboutFirst() {
         duration: 0.6,
       })
 
-      gsap.from('.about-first__socials > *', {
-        opacity: 0,
-        y: 20,
-        stagger: 0.05,
-        delay: 0.2,
-      })
+      gsap.fromTo(
+        '.about-first__socials > *',
+        {
+          opacity: 0,
+          y: 20,
+          stagger: 0.05,
+          delay: 0.2,
+        },
+        {
+          opacity: 1,
+          y: 0,
+        }
+      )
     },
     { scope: container }
   )
@@ -65,27 +67,7 @@ export default function AboutFirst() {
           </p>
         </div>
 
-        <div className="about-first__socials">
-          <Link href="#" className="about-first__social">
-            <IconInstagram />
-          </Link>
-
-          <Link href="#" className="about-first__social">
-            <IconPinterest />
-          </Link>
-
-          <Link href="#" className="about-first__social">
-            <IconFacebook />
-          </Link>
-
-          <Link href="#" className="about-first__social">
-            <IconTwitter />
-          </Link>
-
-          <Link href="#" className="about-first__social">
-            <IconTelegram />
-          </Link>
-        </div>
+        <Socials className="about-first__socials" round />
       </div>
 
       <div className="anim-wrap about-first__image">

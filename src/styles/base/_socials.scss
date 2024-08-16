@@ -1,0 +1,28 @@
+.socials {
+  display: flex;
+  gap: 32px;
+}
+
+.socials--round {
+  @media (max-width: 767px) {
+    gap: 16px;
+  }
+}
+
+.socials__link {
+  transition: 0.3s all ease;
+
+  &:hover {
+    color: rgba(#000, 0.6);
+  }
+}
+
+.socials--round .socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}

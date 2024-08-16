@@ -1,10 +1,5 @@
-import Link from 'next/link'
 import FormRemind from './Form/Remind'
-import IconInstagram from './Icon/Socials/Instagram'
-import IconPinterest from './Icon/Socials/Pinterest'
-import IconTwitter from './Icon/Socials/Twitter'
-import IconFacebook from './Icon/Socials/Facebook'
-import IconTelegram from './Icon/Socials/Telegram'
+import Socials from './Socials'
 
 export default function Footer() {
   return (
@@ -33,27 +28,7 @@ export default function Footer() {
 
         <h3 className="title-h5 footer__title">Follow Us</h3>
 
-        <div className="footer__socials">
-          <Link href="#">
-            <IconInstagram />
-          </Link>
-
-          <Link href="#">
-            <IconPinterest />
-          </Link>
-
-          <Link href="#">
-            <IconFacebook />
-          </Link>
-
-          <Link href="#">
-            <IconTwitter />
-          </Link>
-
-          <Link href="#">
-            <IconTelegram />
-          </Link>
-        </div>
+        <Socials className="footer__socials" />
       </div>
 
       <div className="footer__column">

@@ -4,9 +4,8 @@ import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import Link from 'next/link'
 import ContactForm from '../Form/ContactForm'
-import IcomoonIcon from '../Icomoon'
+import Socials from '../Socials'
 
 const socials = ['instagram', 'pinterest', 'facebook', 'twitter', 'telegram']
 
@@ -85,13 +84,7 @@ export default function ContactUs() {
         <div className="contact-us__socials">
           <h3 className="title-h3 contact-us__socials-title">Follow us:</h3>
 
-          <div className="contact-us__socials-links">
-            {socials.map((social) => (
-              <Link key={social} href="#">
-                <IcomoonIcon icon={social} />
-              </Link>
-            ))}
-          </div>
+          <Socials className="contact-us__socials-links" />
         </div>
       </div>
       <div className="contact-us__form-block">
