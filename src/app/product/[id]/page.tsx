@@ -70,10 +70,15 @@ export default function Product() {
       </div>
 
       <div className="alsos">
-        {also.map((item) => (
+        {also.map((item, index) => (
           <div key={item.id} className="also">
             <h3 className="title-h6 also__title">{item.title}</h3>
-            <h3 className="text-caption also__price">price {item.price}$</h3>
+            <p className="text-caption also__price">price {item.price}$</p>
+            <img
+              src={`/product/item-${index + 1}.jpg`}
+              alt=""
+              className="also__img"
+            />
           </div>
         ))}
       </div>

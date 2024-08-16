@@ -5,6 +5,7 @@ import './../styles/base/_good-card.scss'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
+import Link from 'next/link'
 
 export default function GoodCard({ imgSrc, title, reverse }) {
   const card = useRef()
@@ -42,7 +43,8 @@ export default function GoodCard({ imgSrc, title, reverse }) {
   })
 
   return (
-    <div
+    <Link
+      href={`/product/${title.toLowerCase().replaceAll(' ', '-')}`}
       ref={card}
       className={`good-card ${reverse ? 'good-card--reverse' : ''}`}
     >
@@ -60,6 +62,6 @@ export default function GoodCard({ imgSrc, title, reverse }) {
           height={300}
         />
       </div>
-    </div>
+    </Link>
   )
 }

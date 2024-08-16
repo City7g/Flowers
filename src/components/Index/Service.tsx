@@ -4,12 +4,6 @@ import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import ServiceContent from '../Service-content'
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, useGSAP)
-}
-
 export default function IndexService() {
   const container = useRef()
 

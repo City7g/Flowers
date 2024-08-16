@@ -1,4 +1,5 @@
-import type { Metadata } from 'next'
+'use client'
+
 import localFont from 'next/font/local'
 import '../styles/main.scss'
 import Header from '@/components/Header/Main'
@@ -42,11 +43,6 @@ const gilroy = localFont({
     },
   ],
 })
-
-export const metadata: Metadata = {
-  title: 'Flowers',
-  description: 'Flowers site',
-}
 
 export default function RootLayout({
   children,

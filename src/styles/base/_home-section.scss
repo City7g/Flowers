@@ -1,11 +1,10 @@
 .home-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: flex-start;
   border-bottom: 1px solid #000;
 
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
+    display: grid;
     grid-template-columns: 50% 50%;
+    align-items: flex-start;
   }
 }
 
@@ -13,12 +12,11 @@
   display: grid;
   padding: 40px 16px;
 
-  @media (min-width: 900px) {
-    grid-column: 1 / 2;
+  @media (min-width: 768px) {
+    padding: 80px;
   }
 
   @media (min-width: 1200px) {
-    padding: 80px;
     position: sticky;
     top: 0;
   }
