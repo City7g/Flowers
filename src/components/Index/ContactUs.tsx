@@ -8,10 +8,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../Form/ContactForm'
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, useGSAP)
-}
-
 export default function ContactUs() {
   const container = useRef()
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import GoodCard from './GoodCard'
 import './../styles/base/_home-section.scss'
 
-import { gsap, ScrollTrigger } from 'gsap/all'
+import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
@@ -30,10 +30,6 @@ const cards = [
     title: 'Fresheners',
   },
 ]
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, useGSAP)
-}
 
 export default function HomeSection() {
   const container = useRef()

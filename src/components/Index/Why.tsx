@@ -23,10 +23,6 @@ const content = [
   },
 ]
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, useGSAP)
-}
-
 export default function Why() {
   const container = useRef()
 
