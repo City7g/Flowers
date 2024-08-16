@@ -10,7 +10,7 @@ export default function Header() {
   const { modal, openModal, closeModal } = useModal()
 
   const toggleModal = () => {
-    modal ? closeModal() : openModal('menu')
+    modal === 'menu' ? closeModal() : openModal('menu')
   }
 
   return (

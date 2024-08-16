@@ -1,18 +1,30 @@
 .popup {
   position: fixed;
-  top: 0;
+  top: 56px;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 100;
   display: none;
-  padding-top: 56px;
   opacity: 0;
   transition-duration: 0.3s;
   transition-behavior: allow-discrete;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     padding-top: 83px;
+    top: 0;
+    backdrop-filter: blur(3px);
+  }
+}
+
+.popup--left,
+.popup--right {
+  top: 0;
+  padding-top: 0;
+}
+
+.popup--left {
+  @media (min-width: 768px) {
     backdrop-filter: blur(3px);
   }
 }
@@ -31,10 +43,6 @@ body:has(.popup.show) {
 }
 
 .popup__content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 40px 16px;
   width: 100%;
   height: 100%;
   border: 1px solid #000;
@@ -47,7 +55,6 @@ body:has(.popup.show) {
 
   @media (min-width: 768px) {
     margin: 0 auto;
-    padding: 80px 80px 40px;
   }
 
   @media (min-width: 1200px) {
@@ -61,52 +68,44 @@ body:has(.popup.show) {
 
 .popup.show .popup__content {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(0);
 
   @starting-style {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(150px);
   }
 }
 
-.popup__links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-top: auto;
-}
+.popup--right .popup__content {
+  margin-right: 0;
+  transform: translateX(50%);
 
-.popup__or {
-  position: relative;
-  text-align: center;
-
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #d2d2d7;
-    content: '';
+  @media (min-width: 1200px) {
+    width: 50%;
   }
 }
 
-.popup__or span {
-  position: relative;
-  padding: 0 12px;
-  background-color: #fff;
+.popup--right.show .popup__content {
+  transform: translateX(0px);
+
+  @starting-style {
+    transform: translateX(50%);
+  }
 }
 
-.popup__login-text {
-  margin-bottom: 12px;
-}
-
-.popup__login-btns {
-  display: grid;
-  gap: 16px;
+.popup--left .popup__content {
+  margin-left: 0;
+  transform: translateX(-50%);
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+  }
+}
+
+.popup--left.show .popup__content {
+  transform: translateX(0px);
+
+  @starting-style {
+    transform: translateX(-50%);
   }
 }

@@ -2,21 +2,17 @@
 
 import '../styles/main.scss'
 import Header from '@/components/Header/Main'
-import DialogMenu from '@/components/Dialog/Menu'
+import PopupMenu from '@/components/Popup/Menu'
 import Footer from '@/components/Footer'
 import PopupResetPassword from '@/components/Popup/ResetPassword'
-import DialogCart from '@/components/Dialog/Cart'
+import PopupCart from '@/components/Popup/Cart'
 import PopupSignIn from '@/components/Popup/SignIn'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { gilroy } from './fonts'
 
 if (typeof window !== 'undefined') {
-  console.log('layout')
-
   gsap.registerPlugin(ScrollTrigger, useGSAP)
-} else {
-  console.log('layout 1')
 }
 
 export default function RootLayout({
@@ -33,8 +29,8 @@ export default function RootLayout({
 
         <Footer />
 
-        <DialogMenu />
-        <DialogCart />
+        <PopupMenu />
+        <PopupCart />
 
         <PopupResetPassword />
         <PopupSignIn />
