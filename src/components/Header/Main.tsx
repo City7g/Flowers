@@ -27,7 +27,11 @@ export default function Header() {
         )}
       </div>
 
-      <p className="header__link">Contact</p>
+      <p className="header__link">
+        <Link href="/about" className="btn-anim">
+          <span>About</span>
+        </Link>
+      </p>
 
       <div className="header__link">
         <button onClick={() => openModal('signin')} className="btn-anim">
