@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 import Link from 'next/link'
 
-export default function GoodCard({ imgSrc, title, reverse }) {
+export default function GoodCard({ title, image, reverse }) {
   const card = useRef()
 
   useGSAP(() => {
@@ -54,13 +54,7 @@ export default function GoodCard({ imgSrc, title, reverse }) {
       </div>
 
       <div className="good-card__image">
-        <Image
-          src={imgSrc}
-          alt="good-card"
-          layout="responsive"
-          width={500}
-          height={300}
-        />
+        <Image src={image} alt="good-card" layout="responsive" />
       </div>
     </Link>
   )
