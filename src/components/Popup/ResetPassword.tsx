@@ -2,6 +2,7 @@
 
 import { useModal } from '@/store/modal'
 import FormResetPassword from '../Form/ResetPassword'
+import Popup from './Index'
 
 export default function PopupResetPassword() {
   const { modal, closeModal } = useModal()
@@ -11,29 +12,28 @@ export default function PopupResetPassword() {
   }
 
   return (
-    <div
-      onClick={handleClick}
-      className={`popup ${modal === 'reset' ? 'show' : ''}`}
+    <Popup
+      isShow={modal === 'reset'}
+      clickOutside={handleClick}
+      className="popup-form"
     >
-      <div className="popup__content">
-        <h1 className="title-h2 popup__title">Reset your password</h1>
-        <p className="title-h6 popup__text">
-          Please provide your phone number below to receive a code for restoring
-          access to your account
-        </p>
+      <h1 className="title-h2 popup__title">Reset your password</h1>
+      <p className="title-h6 popup__text">
+        Please provide your phone number below to receive a code for restoring
+        access to your account
+      </p>
 
-        <FormResetPassword />
+      <FormResetPassword />
 
-        <p className="popup__or">
-          <span className="text-caption">or</span>
-        </p>
+      <p className="popup__or">
+        <span className="text-caption">or</span>
+      </p>
 
-        <div className="popup__links">
-          <p className="text-link">Privacy Policy</p>
-          <span className="text-link">|</span>
-          <p className="text-link">Terms and Conditions</p>
-        </div>
+      <div className="popup__links">
+        <p className="text-link">Privacy Policy</p>
+        <span className="text-link">|</span>
+        <p className="text-link">Terms and Conditions</p>
       </div>
-    </div>
+    </Popup>
   )
 }

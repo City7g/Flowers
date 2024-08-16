@@ -1,0 +1,52 @@
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 16px;
+
+  @media (min-width: 768px) {
+    padding: 80px 80px 40px;
+  }
+}
+
+.popup-form__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.popup-form__or {
+  position: relative;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d2d2d7;
+    content: '';
+  }
+}
+
+.popup-form__or span {
+  position: relative;
+  padding: 0 12px;
+  background-color: #fff;
+}
+
+.popup-form__login-text {
+  margin-bottom: 12px;
+}
+
+.popup-form__login-btns {
+  display: grid;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
