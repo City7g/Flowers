@@ -4,7 +4,7 @@ import { useModal } from '@/store/modal'
 import Close from '../Header/Close'
 import Popup from './Index'
 
-export default function popupCart() {
+export default function PopupCart() {
   const { modal, closeModal } = useModal()
 
   const handleClick = (e) => {
