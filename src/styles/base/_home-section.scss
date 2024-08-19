@@ -18,7 +18,7 @@
 
   @media (min-width: 1200px) {
     position: sticky;
-    top: 0;
+    top: var(--header-height);
   }
 }
 

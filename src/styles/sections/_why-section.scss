@@ -8,7 +8,7 @@
   }
 }
 
-.why-section__title,
+.why-section__content,
 .why-section__block {
   padding: 40px 16px;
 
@@ -17,14 +17,14 @@
   }
 }
 
-.why-section__title {
-  @media (min-width: 768px) {
-    position: sticky;
-    top: 0;
-  }
-
+.why-section__content {
   @media (max-width: 767px) {
     border-bottom: 1px solid black;
+  }
+
+  @media (min-width: 1200px) {
+    position: sticky;
+    top: var(--header-height);
   }
 }
 
