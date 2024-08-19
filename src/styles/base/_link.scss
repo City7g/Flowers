@@ -1,0 +1,18 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link i {
+  transition: transform 0.3s ease;
+}
+
+.link:hover i:first-child {
+  transform: translateX(-50%);
+}
+
+
+.link:hover i:last-child {
+  transform: translateX(50%);
+}

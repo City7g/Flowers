@@ -15,16 +15,12 @@
   @media (min-width: 768px) {
     padding: 80px;
   }
-
-  // @media (min-width: 1200px) {
-  //   padding: 80px;
-  // }
 }
 
 .s-base__left {
   @media (min-width: 1200px) {
     position: sticky;
-    top: 0;
+    top: var(--header-height);
   }
 }
 

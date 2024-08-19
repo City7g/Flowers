@@ -1,7 +1,12 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 150;
   display: flex;
   justify-content: space-between;
+  height: var(--header-height);
   border-bottom: 1px solid #000;
+  background-color: #fff;
 
   @media (min-width: 1200px) {
     display: grid;
@@ -57,5 +62,9 @@
 
   @media (min-width: 1200px) {
     display: none;
+  }
+
+  &:hover i {
+    opacity: 0.8;
   }
 }

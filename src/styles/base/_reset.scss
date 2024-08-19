@@ -1,3 +1,12 @@
+
+:root {
+  --header-height: 56px;
+
+  @media (min-width: 1200px) {
+    --header-height: 83px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +16,7 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: #000 #fff;
+  scrollbar-gutter: stable;
 }
 
 body {

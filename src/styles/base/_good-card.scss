@@ -14,14 +14,18 @@
 }
 
 .good-card__content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
-  padding: 2px;
+  gap: 12px;
+  padding: 12px;
   border-right: 1px solid #000;
   text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 24px;
+  }
 }
 
 .good-card:nth-child(even) .good-card__content {
@@ -30,6 +34,15 @@
 
 .good-card:nth-child(even) .good-card__image {
   border-right: 1px solid #000;
+}
+
+.good-card__title {
+  grid-row: 2 / 3;
+}
+
+.good-card__link {
+  grid-row: 3/4;
+  align-self: flex-end;
 }
 
 .good-card__image {

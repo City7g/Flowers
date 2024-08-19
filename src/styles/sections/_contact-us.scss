@@ -83,7 +83,6 @@
 }
 
 .contact-us__links-block {
-  // border-bottom: 1px solid black;
 
   @media (min-width: 768px) {
     display: grid;
@@ -128,28 +127,11 @@
   }
 }
 
-.phone-link,
-.location {
+.text-link {
   display: flex;
-  align-items: center;
   gap: 5px;
-
-  &::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 24px;
-  }
 }
 
-.phone-link {
-  &::before {
-    background-image: url('/icons/call.svg');
-  }
-}
-
-.location {
-  &::before {
-    background-image: url('/icons/pin_drop.svg');
-  }
+.text-link:hover i {
+  opacity: 0.7;
 }

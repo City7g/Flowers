@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import IconBag from '../Icon/Bag'
 import Burger from './Burger'
 import Link from 'next/link'
+import IcomoonIcon from '../Icomoon'
 
 export default function Header() {
   const { modal, openModal, closeModal } = useModal()
@@ -50,7 +51,7 @@ export default function Header() {
       </div>
 
       <button onClick={() => openModal('cart')} className="bag">
-        <IconBag />
+        <IcomoonIcon icon={'local-mall'} />
       </button>
     </header>
   )

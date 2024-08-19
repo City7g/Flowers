@@ -41,7 +41,7 @@ export default function Why() {
       },
     })
 
-    titles.forEach((title) => {
+    titles.forEach(title => {
       gsap.from(title, {
         opacity: 0,
         y: 100,
@@ -53,7 +53,7 @@ export default function Why() {
       })
     })
 
-    texts.forEach((text) => {
+    texts.forEach(text => {
       gsap.from(text, {
         opacity: 0,
         y: 100,
@@ -67,12 +67,14 @@ export default function Why() {
 
   return (
     <div ref={container} className="why-section">
-      <div className="why-section__title-wrap">
-        <h2 className="title-h2 why-section__title">Why choose us?</h2>
+      <div className="why-section__content">
+        <div className="why-section__title-wrap">
+          <h2 className="title-h2 why-section__title">Why choose us?</h2>
+        </div>
       </div>
-
+      
       <div className="why-section__blocks">
-        {content.map((item) => (
+        {content.map(item => (
           <div key={item.title} className="why-section__block">
             <div className="why-section__block-title-wrap">
               <h3 className="title-h3 why-section__block-title">
