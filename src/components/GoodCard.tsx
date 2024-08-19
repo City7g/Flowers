@@ -1,11 +1,11 @@
-import ShopNow from '@/app/ui/buttons/shop-now'
 import Image from 'next/image'
 import './../styles/base/_good-card.scss'
 
+import Link from 'next/link'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
-import Link from 'next/link'
+import BaseLink from './Link'
 
 export default function GoodCard({ title, image, reverse }) {
   const card = useRef()
@@ -50,7 +50,12 @@ export default function GoodCard({ title, image, reverse }) {
     >
       <div className="good-card__content">
         <h3 className="title-h3 good-card__title">{title}</h3>
-        <ShopNow reverse={reverse} />
+        <BaseLink
+          text="Shop now"
+          href="/category"
+          isRight={reverse}
+          className="good-card__link"
+        />
       </div>
 
       <div className="good-card__image">

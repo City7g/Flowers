@@ -88,6 +88,16 @@
   }
 }
 
+.text-links {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
 .text-overline {
   font-size: 12px;
   line-height: 1.2;
