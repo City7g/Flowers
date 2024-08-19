@@ -63,4 +63,8 @@
   @media (min-width: 1200px) {
     display: none;
   }
+
+  &:hover i {
+    opacity: 0.8;
+  }
 }

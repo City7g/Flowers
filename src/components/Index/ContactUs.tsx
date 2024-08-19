@@ -8,6 +8,7 @@ import ContactForm from '../Form/ContactForm'
 import Socials from '../Socials'
 import image from '../../../public/contact.png'
 import Image from 'next/image'
+import IcomoonIcon from '../Icomoon'
 
 export default function ContactUs() {
   const container = useRef()
@@ -99,9 +100,11 @@ export default function ContactUs() {
           <h3 className="title-h3 contact-us__subtitle">Phone</h3>
           <div className="phone-links">
             <a href="tel:+380980099777" className="text-link phone-link">
+              <IcomoonIcon icon={'phone'} />
               +380980099777
             </a>
             <a href="tel:+380980099111" className="text-link phone-link">
+              <IcomoonIcon icon={'phone'} />
               +380980099111
             </a>
           </div>
@@ -111,6 +114,7 @@ export default function ContactUs() {
           <div className="address-link">
             <p>opening hours: 8 to 11 p.m.</p>
             <a href="#" className="text-link location">
+              <IcomoonIcon icon={'pin'} />
               15/4 Khreshchatyk Street, Kyiv
             </a>
           </div>
