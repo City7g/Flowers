@@ -52,7 +52,7 @@ export default function HomeSection() {
         duration: 0.6,
       })
         .from(
-          '.home-sectoin__text',
+          '.home-section__text',
           {
             opacity: 0,
             y: 100,
@@ -87,11 +87,11 @@ export default function HomeSection() {
       <div className="home-section__main">
         <div className="home-section__header">
           <h1 className="title-h1 home-section__title">
-            Kyiv <br /> LuxeBouquets
+            Kyiv <br /> LuxeBouquets <sup>R</sup>
           </h1>
-          <p className="text-subtitle home-sectoin__text">
+          <p className="text-body-big home-section__text">
             Discover Uniquely Crafted Bouquets and Gifts for Any Occasion:
-            Spread Joy with Our Online Flower Delivery Service
+            Spread Joy with Our <i>Online Flower Delivery Service</i>
           </p>
         </div>
         <div className="home-section__footer">
