@@ -1,8 +1,11 @@
 'use client'
 
-import { gsap, ScrollTrigger } from 'gsap/all'
+import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
+
+import image from '../../../public/service.png'
+import Image from 'next/image'
 
 export default function IndexService() {
   const container = useRef()
@@ -69,7 +72,7 @@ export default function IndexService() {
   return (
     <div ref={container} className="about-first about-first--reverse">
       <div className="anim-wrap about-first__image">
-        <img className="about-first__img" src="/service.png" alt="flower-img" />
+        <Image src={image} alt="" className="about-first__img" />
       </div>
 
       <div className="about-first__content">

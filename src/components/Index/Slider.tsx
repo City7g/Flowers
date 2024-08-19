@@ -1,6 +1,9 @@
 'use client'
+
+import Image from 'next/image'
 import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import googleIcon from '../../../public/icons/google-logo.svg'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -31,11 +34,7 @@ export default function Slider() {
   return (
     <div className="slider-section">
       <a href="https://www.google.com/" target="black">
-        <img
-          className="slider-section__logo"
-          src="/Slider/google-logo.svg"
-          alt="google"
-        />
+        <Image src={googleIcon} alt="google" className="lider-section__logo" />
       </a>
       <p className="text-overline slider-section__subtitle">Reviews</p>
       <h2 className="title-h2 slider-section__title">Our Clients say</h2>
@@ -46,8 +45,8 @@ export default function Slider() {
         navigation
         pagination={{ clickable: true }}
       >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.text}>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
             <p className="slide__text">{slide.text}</p>
             <h6 className="title-h6 slide__auther">-{slide.auther}</h6>
           </SwiperSlide>

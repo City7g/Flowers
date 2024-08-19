@@ -9,10 +9,17 @@
 
 .product__content {
   padding: 40px 16px;
-  border-left: 1px solid #000;
+
+  @media (max-width: 1199px) {
+    border-top: 1px solid #000;
+  }
 
   @media (min-width: 768px) {
     padding: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    border-left: 1px solid #000;
   }
 }
 

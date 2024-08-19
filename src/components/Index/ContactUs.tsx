@@ -6,8 +6,8 @@ import { useRef } from 'react'
 
 import ContactForm from '../Form/ContactForm'
 import Socials from '../Socials'
-
-const socials = ['instagram', 'pinterest', 'facebook', 'twitter', 'telegram']
+import image from '../../../public/contact.png'
+import Image from 'next/image'
 
 export default function ContactUs() {
   const container = useRef()
@@ -74,11 +74,7 @@ export default function ContactUs() {
     <div ref={container} className="contact-us">
       <div className="contact-us__image-block">
         <div className="contact-us__image">
-          <img
-            className="contact-us__img"
-            src="/contact.png"
-            alt="contact-img"
-          />
+          <Image src={image} alt="" className="contact-us__img" />
         </div>
 
         <div className="contact-us__socials">

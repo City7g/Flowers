@@ -1,11 +1,16 @@
 import Quantity from '@/components/Quantity'
-// import Image from 'next/image'
+import Image from 'next/image'
+import image from '../../../../public/product.jpg'
+import image1 from '../../../../public/product/item-1.jpg'
+import image2 from '../../../../public/product/item-2.jpg'
+import image3 from '../../../../public/product/item-3.jpg'
+import image4 from '../../../../public/product/item-4.jpg'
 
 const also = [
-  { id: 0, title: 'Rattan Grapefruit', price: 48 },
-  { id: 1, title: 'Lime & Matcha', price: 46 },
-  { id: 2, title: 'Cedar & Lavender', price: 64 },
-  { id: 3, title: 'Ocean Mist', price: 58 },
+  { id: 0, title: 'Rattan Grapefruit', price: 48, img: image1 },
+  { id: 1, title: 'Lime & Matcha', price: 46, img: image2 },
+  { id: 2, title: 'Cedar & Lavender', price: 64, img: image3 },
+  { id: 3, title: 'Ocean Mist', price: 58, img: image4 },
 ]
 
 export default function Product() {
@@ -13,15 +18,7 @@ export default function Product() {
     <div>
       <div className="product">
         <div className="product__image">
-          {/* <Image
-          src="/product.jpg"
-          alt="Rosy Delight"
-          layout="responsive"
-          width={720}
-          height={300}
-          className="product__img"
-          /> */}
-          <img src="/product.jpg" alt="Rosy Delight" className="product__img" />
+          <Image src={image} alt="Rosy Delight" className="product__img" />
         </div>
         <div className="product__content">
           <div className="text-overline category product__category">
@@ -74,11 +71,7 @@ export default function Product() {
           <div key={item.id} className="also">
             <h3 className="title-h6 also__title">{item.title}</h3>
             <p className="text-caption also__price">price {item.price}$</p>
-            <img
-              src={`/product/item-${index + 1}.jpg`}
-              alt=""
-              className="also__img"
-            />
+            <Image src={item.img} alt="" className="also__img" />
           </div>
         ))}
       </div>
