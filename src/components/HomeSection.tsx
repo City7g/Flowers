@@ -8,11 +8,12 @@ import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import image1 from '../../public/HomeSection/good-card-1.jpg'
-import image2 from '../../public/HomeSection/good-card-2.jpg'
-import image3 from '../../public/HomeSection/good-card-3.jpg'
-import image4 from '../../public/HomeSection/good-card-4.jpg'
-import image5 from '../../public/HomeSection/good-card-5.jpg'
+import leftImage from '../../public/first.jpg'
+import image1 from '../../public/goods/item-1.jpg'
+import image2 from '../../public/goods/item-2.jpg'
+import image3 from '../../public/goods/item-3.jpg'
+import image4 from '../../public/goods/item-4.jpg'
+import image5 from '../../public/goods/item-5.jpg'
 
 const cards = [
   {
@@ -95,13 +96,7 @@ export default function HomeSection() {
         </div>
         <div className="home-section__footer">
           <div className="home-section__image">
-            <Image
-              src="/HomeSection/img-hero.png"
-              alt="img-hero"
-              layout="responsive"
-              width={500}
-              height={300}
-            />
+            <Image src={leftImage} alt="img-hero" style={{ height: 'auto' }} />
           </div>
           <div className="home-section__footer-text-wrap">
             <p className="text-caption home-section__footer-text">

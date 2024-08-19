@@ -54,7 +54,7 @@ export default function GoodCard({ title, image, reverse }) {
       </div>
 
       <div className="good-card__image">
-        <Image src={image} alt="good-card" layout="responsive" />
+        <Image src={image} alt="good-card" />
       </div>
     </Link>
   )

@@ -5,6 +5,8 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
 import Socials from '../Socials'
+import mainImage from '../../../public/about/first-bg.jpg'
+import Image from 'next/image'
 
 export default function AboutFirst() {
   const container = useRef()
@@ -71,7 +73,7 @@ export default function AboutFirst() {
       </div>
 
       <div className="anim-wrap about-first__image">
-        <img src="/about/first-bg.jpg" alt="" className="about-first__img" />
+        <Image src={mainImage} alt="" className="about-first__img" />
       </div>
     </section>
   )

@@ -3,16 +3,15 @@
 import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
+import Image from 'next/image'
 
-export default function StoryCard({ story: { id, title, text } }) {
+export default function StoryCard({ story: { id, title, text, img } }) {
   const card = useRef()
 
   useGSAP(() => {
     const title = card.current.querySelector('.story__title')
     const text = card.current.querySelector('.story__text')
     const img = card.current.querySelector('.story__img')
-
-    console.log(img)
 
     gsap.from(title, {
       opacity: 0,
@@ -45,7 +44,7 @@ export default function StoryCard({ story: { id, title, text } }) {
   return (
     <div ref={card} className="story">
       <div className="anim-wrap story__image">
-        <img src={`/about/story-${id + 1}.jpg`} alt="" className="story__img" />
+        <Image src={img} alt="" className="story__img" />
       </div>
 
       <div className="story__content">

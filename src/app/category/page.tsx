@@ -1,55 +1,75 @@
 import CategoryCard from '@/components/CategoryCard'
+import category1 from '../../../public/category/item-1.jpg'
+import category2 from '../../../public/category/item-2.jpg'
+import category3 from '../../../public/category/item-3.jpg'
+import category4 from '../../../public/category/item-4.jpg'
+import category5 from '../../../public/category/item-5.jpg'
+import category6 from '../../../public/category/item-6.jpg'
+import category7 from '../../../public/category/item-7.jpg'
+import category8 from '../../../public/category/item-8.jpg'
+import category9 from '../../../public/category/item-9.jpg'
+import category10 from '../../../public/category/item-10.jpg'
 
 const categoryCards = [
   {
-    imgSrc: '/CategorySection/card-item-1.jpg',
-    price: 70,
+    id: 0,
     title: 'Snowfall',
+    price: 70,
+    img: category1,
   },
   {
-    imgSrc: '/CategorySection/card-item-2.jpg',
-    price: 70,
+    id: 1,
     title: "Dawn's Delight",
+    price: 70,
+    img: category2,
   },
   {
-    imgSrc: '/CategorySection/card-item-3.jpg',
-    price: 70,
+    id: 2,
     title: 'Pink Elegance',
+    price: 70,
+    img: category3,
   },
   {
-    imgSrc: '/CategorySection/card-item-4.jpg',
-    price: 70,
+    id: 3,
     title: 'Rustic Charm',
+    price: 70,
+    img: category4,
   },
   {
-    imgSrc: '/CategorySection/card-item-5.jpg',
-    price: 70,
+    id: 4,
     title: 'Autumn Symphony',
+    price: 70,
+    img: category5,
   },
   {
-    imgSrc: '/CategorySection/card-item-6.jpg',
-    price: 70,
+    id: 5,
     title: 'Rosy Delight',
+    price: 70,
+    img: category6,
   },
   {
-    imgSrc: '/CategorySection/card-item-7.jpg',
-    price: 70,
+    id: 6,
     title: 'Serenity',
+    price: 70,
+    img: category7,
   },
   {
-    imgSrc: '/CategorySection/card-item-8.jpg',
-    price: 70,
+    id: 7,
     title: 'Blue Harmony',
+    price: 70,
+    img: category8,
   },
   {
-    imgSrc: '/CategorySection/card-item-9.jpg',
-    price: 70,
+    id: 8,
     title: 'Mystical Majesty',
+    price: 70,
+    img: category9,
   },
   {
-    imgSrc: '/CategorySection/card-item-10.jpg',
-    price: 70,
+    id: 9,
     title: 'Blazing Blossoms',
+    price: 70,
+    img: category10,
   },
 ]
 
@@ -60,12 +80,12 @@ export default function Category() {
         <h1 className="title-h1 category__title">Fresh Flowers</h1>
       </div>
       <div className="category__right">
-        {categoryCards.map(card => (
+        {categoryCards.map((card) => (
           <CategoryCard
-            key={card.imgSrc}
-            imgSrc={card.imgSrc}
+            key={card.id}
             title={card.title}
             price={card.price}
+            img={card.img}
           />
         ))}
       </div>

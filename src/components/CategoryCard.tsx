@@ -1,10 +1,11 @@
 'use client'
 
+import Image from 'next/image'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-export default function CategoryCard({ imgSrc, price, title }) {
+export default function CategoryCard({ title, price, img }) {
   const card = useRef()
 
   useGSAP(() => {
@@ -40,7 +41,13 @@ export default function CategoryCard({ imgSrc, price, title }) {
 
   return (
     <div ref={card} className="category-card">
-      <img className="category-card__img" src={imgSrc} alt="img" />
+      <Image
+        src={img}
+        alt=""
+        style={{ width: '100%', height: '100%' }}
+        className="category-card__img"
+      />
+
       <div className="category-card__content">
         <h6 className="title-h6 category-card__title">{title}</h6>
         <p className="text-caption category-card__price">price {price}$</p>

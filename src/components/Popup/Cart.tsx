@@ -3,6 +3,8 @@
 import { useModal } from '@/store/modal'
 import Close from '../Header/Close'
 import Popup from './Index'
+import checkoutImage from '../../../public/checkout.jpg'
+import Image from 'next/image'
 
 export default function PopupCart() {
   const { modal, closeModal } = useModal()
@@ -26,7 +28,7 @@ export default function PopupCart() {
 
       <div className="cart__cards">
         <div className="cart__card">
-          <img src="/checkout.jpg" alt="" className="cart__card-img" />
+          <Image src={checkoutImage} alt="" className="cart__card-img" />
 
           <div className="cart__card-info">
             <p className="text-subtitle">Rosy Delight</p>
