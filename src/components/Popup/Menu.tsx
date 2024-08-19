@@ -5,13 +5,20 @@ import { useModal } from '@/store/modal'
 import Close from '../Header/Close'
 import Socials from '../Socials'
 import Popup from './Index'
+import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function PopupMenu() {
   const { modal, openModal, closeModal } = useModal()
+  const pathname = usePathname()
 
   const handleClick = (e) => {
     if (e.target === e.currentTarget) closeModal()
   }
+
+  useEffect(() => {
+    closeModal()
+  }, [pathname])
 
   return (
     <Popup
