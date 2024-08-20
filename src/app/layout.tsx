@@ -12,18 +12,15 @@ import { useGSAP } from '@gsap/react'
 import { gilroy } from './fonts'
 import { useLayoutEffect } from 'react'
 
-// if (typeof window !== 'undefined') {
-// }
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger, useGSAP)
+}
 
 export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, useGSAP)
-  }, [])
-
   return (
     <html lang="en" className={gilroy.className}>
       <head>
