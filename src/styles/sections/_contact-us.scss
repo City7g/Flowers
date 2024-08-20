@@ -49,7 +49,6 @@
 .contact-us__socials {
   display: flex;
   flex-direction: column;
-  border-bottom: var(--border-line);
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -87,27 +86,26 @@
 }
 
 .contact-us__links-block {
-  position: relative;
-
   @media (min-width: 1200px) {
     flex-grow: 1;
   }
 
-  &::after {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 50%;
-    bottom: 0;
-    width: 1px;
-    background-color: var(--border-color);
-    transform: translateX(-50%);
-    content: '';
-  }
-
   @media (min-width: 768px) {
+    position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
+
+    &::after {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+      content: '';
+    }
   }
 
   @media (min-width: 1200px) {

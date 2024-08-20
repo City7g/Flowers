@@ -40,12 +40,6 @@
   }
 }
 
-.why-section__block {
-  @media (max-width: 1199px) {
-    border-top: var(--border-line);
-  }
-}
-
 .why-section__block + .why-section__block {
   border-top: var(--border-line);
 }

@@ -2,9 +2,8 @@ import Image from 'next/image'
 import BreadCrumbs from '@/components/BreadCrumbs'
 import FormCheckoutFirst from '@/components/Form/Checkout/First'
 import FormCheckoutGift from '@/components/Form/Checkout/Gift'
-import IconLock from '@/components/Icon/Lock'
-
-import checkoutImage from '../../../public/checkout.jpg'
+import image from '../../../public/checkout.jpg'
+import IcomoonIcon from '@/components/Icomoon'
 
 export default function Checkout() {
   return (
@@ -27,7 +26,7 @@ export default function Checkout() {
         <p className="text-overline checkout__title">Order summary</p>
 
         <div className="checkout-card checkout__card">
-          <Image src={checkoutImage} alt="" className="checkout-card__img" />
+          <Image src={image} alt="" className="checkout-card__img" />
 
           <div className="checkout-card__content">
             <h2 className="text-subtitle checkout-card__title">Snowfall</h2>
@@ -63,7 +62,7 @@ export default function Checkout() {
 
         <p className="text-caption checkout__secure">
           Secure Checkout
-          <IconLock />
+          <IcomoonIcon icon="lock-light" />
         </p>
       </div>
     </div>

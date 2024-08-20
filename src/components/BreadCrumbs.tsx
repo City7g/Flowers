@@ -1,13 +1,15 @@
 const links = ['Information', 'Shipping', 'Payment']
 
-export default function BreadCrumbs() {
+export default function BreadCrumbs({ className = '' }) {
   return (
-    <div className="breadcrumbs">
-      {links.map((link) => (
-        <span className="breadcrumbs__item" key={link}>
-          {link}
-        </span>
-      ))}
-    </div>
+    <nav className={className} aria-label="breadcrumb">
+      <ol className="breadcrumb">
+        <li className="breadcrumb__item">Information</li>
+        <li className="breadcrumb__item">Shipping</li>
+        <li className="breadcrumb__item active" aria-current="page">
+          Payment
+        </li>
+      </ol>
+    </nav>
   )
 }

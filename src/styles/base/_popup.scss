@@ -93,6 +93,13 @@ body:has(.popup.show) {
   }
 }
 
+.popup--left .popup__content,
+.popup--right .popup__content {
+  border: none;
+  outline: var(--border-line);
+  outline-offset: -1px;
+}
+
 .popup--right .popup__content {
   margin-right: 0;
   transform: translateX(50%);
