@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 
-export default function Quantity() {
+export default function Quantity({ className = '' }) {
   const [quantity, setQuantity] = useState(1)
 
   return (
-    <div className="quantity">
+    <div className={`quantity ${className ?? ''}`}>
       <button
         onClick={() => setQuantity(quantity - 1)}
         className="quantity__button"

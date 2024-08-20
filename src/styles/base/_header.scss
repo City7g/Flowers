@@ -69,7 +69,14 @@
 }
 
 .header__bag {
+  transition: 0.3s color ease;
   border-left: var(--border-line);
+
+  @media (pointer: fine) {
+    &:hover {
+      color: var(--gray);
+    }
+  }
 
   @media (min-width: 1200px) {
     display: none;

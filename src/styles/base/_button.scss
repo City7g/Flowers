@@ -11,9 +11,9 @@
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
-  background: black;
+  background: var(--black);
   border: var(--border-line);
-  color: white;
+  color: var(--white);
   transition: 0.3s ease;
   transition-property: color, background, border;
   white-space: nowrap;
@@ -29,7 +29,7 @@
   }
 
   &:active {
-    background: black;
+    background: var(--black);
   }
 
   &:disabled {

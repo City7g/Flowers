@@ -18,6 +18,17 @@
   border-bottom: var(--border-line);
 }
 
+.menu__link {
+  text-align: left;
+  transition: 0.3s color ease;
+
+  @media (pointer: fine) {
+    &:hover {
+      color: var(--gray);
+    }
+  }
+}
+
 .menu__item + .menu__item {
   margin-top: 16px;
 }

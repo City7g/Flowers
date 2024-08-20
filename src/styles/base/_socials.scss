@@ -11,9 +11,12 @@
 
 .socials__link {
   transition: 0.3s all ease;
+  transition-property: color, border-color;
 
-  &:hover {
-    color: rgba(var(--border-color), 0.6);
+  @media (pointer: fine) {
+    &:hover {
+      color: var(--gray);
+    }
   }
 }
 
@@ -25,4 +28,10 @@
   height: 48px;
   border-radius: 50%;
   border: var(--border-line);
+
+  @media (pointer: fine) {
+    &:hover {
+      border-color: var(--gray);
+    }
+  }
 }

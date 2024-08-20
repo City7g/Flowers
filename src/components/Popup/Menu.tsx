@@ -31,9 +31,12 @@ export default function PopupMenu() {
         <Close onClick={closeModal} />
       </div>
 
-      <p onClick={() => openModal('signin')} className="title-h5 menu__link">
+      <button
+        onClick={() => openModal('signin')}
+        className="title-h5 menu__link"
+      >
         Sign in
-      </p>
+      </button>
       <Link href="/" className="title-h5 menu__link">
         Home
       </Link>
@@ -42,6 +45,9 @@ export default function PopupMenu() {
       </Link>
       <Link href="/about" className="title-h5 menu__link">
         About us
+      </Link>
+      <Link href="/subscription" className="title-h5 menu__link">
+        Subscription
       </Link>
 
       <div className="menu__list">
