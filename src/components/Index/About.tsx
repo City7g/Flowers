@@ -7,50 +7,53 @@ import { useRef } from 'react'
 export default function IndexAbout() {
   const container = useRef()
 
-  useGSAP(() => {
-    const mainTitle = document.querySelector('.s-base__title')
-    const title = document.querySelector('.s-base__heading')
-    const subtitle = document.querySelector('.s-base__subtitle')
-    const text = document.querySelector('.s-base__text')
+  useGSAP(
+    () => {
+      const mainTitle = document.querySelector('.s-base__title')
+      const title = document.querySelector('.s-base__heading')
+      const subtitle = document.querySelector('.s-base__subtitle')
+      const text = document.querySelector('.s-base__text')
 
-    gsap.from(mainTitle, {
-      opacity: 0,
-      y: 100,
-      rotate: 10,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: mainTitle,
-      },
-    })
+      gsap.from(mainTitle, {
+        opacity: 0,
+        y: 100,
+        rotate: 10,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: mainTitle,
+        },
+      })
 
-    gsap.from(title, {
-      opacity: 0,
-      y: 100,
-      rotate: 10,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: title,
-      },
-    })
+      gsap.from(title, {
+        opacity: 0,
+        y: 100,
+        rotate: 10,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: title,
+        },
+      })
 
-    gsap.from(subtitle, {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: subtitle,
-      },
-    })
+      gsap.from(subtitle, {
+        opacity: 0,
+        y: 100,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: subtitle,
+        },
+      })
 
-    gsap.from(text, {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: text,
-      },
-    })
-  })
+      gsap.from(text, {
+        opacity: 0,
+        y: 100,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: text,
+        },
+      })
+    },
+    { scope: container }
+  )
 
   return (
     <section ref={container} className="s-base">

@@ -7,39 +7,44 @@ import { useRef } from 'react'
 export default function AboutText() {
   const container = useRef()
 
-  useGSAP(() => {
-    const subtitle = container.current.querySelector('.text-section__subtitle')
-    const title = container.current.querySelector('.text-section__title')
-    const text = container.current.querySelector('.text-section__text')
+  useGSAP(
+    () => {
+      const subtitle = container.current.querySelector(
+        '.text-section__subtitle'
+      )
+      const title = container.current.querySelector('.text-section__title')
+      const text = container.current.querySelector('.text-section__text')
 
-    gsap.from(subtitle, {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: subtitle,
-      },
-    })
+      gsap.from(subtitle, {
+        opacity: 0,
+        y: 100,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: subtitle,
+        },
+      })
 
-    gsap.from(title, {
-      opacity: 0,
-      y: 100,
-      rotate: 10,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: title,
-      },
-    })
+      gsap.from(title, {
+        opacity: 0,
+        y: 100,
+        rotate: 10,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: title,
+        },
+      })
 
-    gsap.from(text, {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: text,
-      },
-    })
-  })
+      gsap.from(text, {
+        opacity: 0,
+        y: 100,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: text,
+        },
+      })
+    },
+    { scope: container }
+  )
 
   return (
     <section ref={container} className="text-section">

@@ -7,39 +7,42 @@ import { useRef } from 'react'
 export default function AboutDiscover() {
   const container = useRef()
 
-  useGSAP(() => {
-    const title = container.current.querySelector('.text-section__title')
-    const text = container.current.querySelector('.text-section__text')
-    const btn = container.current.querySelector('.text-section__btn')
+  useGSAP(
+    () => {
+      const title = container.current.querySelector('.text-section__title')
+      const text = container.current.querySelector('.text-section__text')
+      const btn = container.current.querySelector('.text-section__btn')
 
-    gsap.from(title, {
-      opacity: 0,
-      y: 100,
-      rotate: 10,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: title,
-      },
-    })
+      gsap.from(title, {
+        opacity: 0,
+        y: 100,
+        rotate: 10,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: title,
+        },
+      })
 
-    gsap.from(text, {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: text,
-      },
-    })
+      gsap.from(text, {
+        opacity: 0,
+        y: 100,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: text,
+        },
+      })
 
-    gsap.from(btn, {
-      opacity: 0,
-      y: 50,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: btn.parentNode,
-      },
-    })
-  })
+      gsap.from(btn, {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: btn.parentNode,
+        },
+      })
+    },
+    { scope: container }
+  )
 
   return (
     <section ref={container} className="text-section">
