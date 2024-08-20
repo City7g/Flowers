@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import './../styles/base/_good-card.scss'
+import '../styles/base/_good-card.scss'
 
-import Link from 'next/link'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
@@ -29,26 +28,22 @@ export default function GoodCard({ title, image, reverse }) {
           },
           0.3
         )
-        .fromTo(
-          card.current.querySelector('.shop-now-btn'),
+        .from(
+          card.current.querySelector('.good-card__link'),
           {
             opacity: 0,
+            y: 5,
           },
-          {
-            opacity: 1,
-          },
-          0.5
+          0.7
         ),
     })
   })
 
   return (
-    <div
-      ref={card}
-      className={`good-card ${reverse ? 'good-card--reverse' : ''}`}
-    >
+    <div ref={card} className="good-card">
       <div className="good-card__content">
         <h3 className="title-h3 good-card__title">{title}</h3>
+
         <BaseLink
           text="Shop now"
           href={`/product/${title.toLowerCase().replaceAll(' ', '-')}`}
