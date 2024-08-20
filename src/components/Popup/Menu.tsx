@@ -40,7 +40,7 @@ export default function PopupMenu() {
       <Link href="/" className="title-h5 menu__link">
         Home
       </Link>
-      <Link href="/category" className="title-h5 menu__link">
+      <Link href="/shop" className="title-h5 menu__link">
         Shop
       </Link>
       <Link href="/about" className="title-h5 menu__link">

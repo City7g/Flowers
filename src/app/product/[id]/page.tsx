@@ -14,7 +14,7 @@ const also = [
   { id: 3, title: 'Ocean Mist', price: 58, img: image4 },
 ]
 
-export default function Product() {
+export default function ProductPage() {
   return (
     <div>
       <div className="product">

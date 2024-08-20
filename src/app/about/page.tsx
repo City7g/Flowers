@@ -3,7 +3,7 @@ import AboutFirst from '@/components/About/First'
 import AboutStory from '@/components/About/Story'
 import AboutText from '@/components/About/Text'
 
-export default function About() {
+export default function AboutPage() {
   return (
     <main>
       <AboutFirst />
