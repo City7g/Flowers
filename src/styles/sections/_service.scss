@@ -28,7 +28,7 @@
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  border-top: 1px solid #000;
+  border-top: var(--border-line);
 
   @media (min-width: 1200px) {
     height: 100vh;

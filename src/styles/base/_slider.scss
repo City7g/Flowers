@@ -1,7 +1,7 @@
 .slider-section {
   padding: 40px 16px;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
 
   @media (min-width: 768px) {
     padding: 80px;
@@ -80,5 +80,5 @@
 }
 
 .swiper-pagination-bullet {
-  background: #808080;
+  background: var(--gray);
 }

@@ -1,5 +1,5 @@
 .product {
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
 
   @media (min-width: 1200px) {
     display: grid;
@@ -11,7 +11,7 @@
   padding: 40px 16px;
 
   @media (max-width: 1199px) {
-    border-top: 1px solid #000;
+    border-top: var(--border-line);
   }
 
   @media (min-width: 768px) {
@@ -19,7 +19,7 @@
   }
 
   @media (min-width: 1200px) {
-    border-left: 1px solid #000;
+    border-left: var(--border-line);
   }
 }
 
@@ -79,12 +79,12 @@
   }
 
   &:not(:first-child) {
-    color: #808080;
+    color: var(--gray);
   }
 }
 
 .alsos {
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
 
   @media (min-width: 768px) {
     display: grid;
@@ -112,7 +112,7 @@
 
   &:nth-child(even),
   &:nth-child(4n + 3) {
-    border-left: 1px solid #000;
+    border-left: var(--border-line);
   }
 }
 
@@ -130,10 +130,10 @@
 
 .also + .also {
   @media (max-width: 767px) {
-    border-top: 1px solid #000;
+    border-top: var(--border-line);
   }
 }
 
 .also__price {
-  color: #808080;
+  color: var(--gray);
 }

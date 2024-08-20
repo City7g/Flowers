@@ -1,8 +1,20 @@
 .good-card {
+  position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-row: span 1;
   height: 100%;
+
+  &::after {
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 1px;
+    transform: translateX(-50%);
+    background-color: var(--border-color);
+    position: absolute;
+    content: '';
+  }
 }
 
 .good-card:nth-child(even) .good-card__content {
@@ -10,7 +22,7 @@
 }
 
 .good-card + .good-card {
-  border-top: 1px solid black;
+  border-top: var(--border-line);
 }
 
 .good-card__content {
@@ -20,20 +32,11 @@
   align-items: center;
   gap: 12px;
   padding: 12px;
-  border-right: 1px solid #000;
   text-align: center;
 
   @media (min-width: 768px) {
     padding: 24px;
   }
-}
-
-.good-card:nth-child(even) .good-card__content {
-  border-right: none;
-}
-
-.good-card:nth-child(even) .good-card__image {
-  border-right: 1px solid #000;
 }
 
 .good-card__title {

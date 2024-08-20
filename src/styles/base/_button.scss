@@ -12,7 +12,7 @@
   font-weight: 500;
   text-transform: uppercase;
   background: black;
-  border: 1px solid black;
+  border: var(--border-line);
   color: white;
   transition: 0.3s ease;
   transition-property: color, background, border;
@@ -33,9 +33,9 @@
   }
 
   &:disabled {
-    background: #d2d2d7;
-    color: #808080;
-    border-color: #d2d2d7;
+    background: var(--light-gray);
+    color: var(--gray);
+    border-color: var(--light-gray);
   }
 }
 
@@ -69,8 +69,8 @@
 
   &:disabled {
     background: white;
-    color: #808080;
-    border-color: #d2d2d7;
+    color: var(--gray);
+    border-color: var(--light-gray);
   }
 }
 
@@ -91,8 +91,8 @@
 
   &:disabled {
     background: transparent;
-    color: #d2d2d7;
-    border-color: #808080;
+    color: var(--light-gray);
+    border-color: var(--gray);
   }
 }
 

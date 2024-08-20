@@ -13,10 +13,9 @@
 }
 
 .menu__link,
-.menu__list,
-.menu__socials {
+.menu__list {
   padding: 24px;
-  border-top: 1px solid #000;
+  border-bottom: var(--border-line);
 }
 
 .menu__item + .menu__item {
@@ -28,16 +27,18 @@
   align-items: center;
   gap: 32px;
   margin-top: auto;
+  padding: 24px;
 }
 
 .menu__header {
   flex-shrink: 0;
-  height: 55px;
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   padding: 10px 16px;
+  border-bottom: var(--border-line);
 
   @media (min-width: 1200px) {
     height: 83px;
@@ -51,7 +52,7 @@
   align-items: center;
   gap: 10px;
   padding: 40px 16px;
-  border-top: 1px solid #000;
+  border-top: var(--border-line);
 
   @media (min-width: 768px) {
     padding: 40px;
@@ -60,7 +61,7 @@
 
 .menu__message {
   padding: 24px 16px;
-  border-top: 1px solid #000;
+  border-top: var(--border-line);
 
   @media (min-width: 768px) {
     padding: 40px;
@@ -81,7 +82,7 @@
   padding: 40px 16px;
   text-align: center;
   text-wrap: balance;
-  border-top: 1px solid #000;
+  border-top: var(--border-line);
 
   @media (min-width: 768px) {
     padding: 40px 80px;
@@ -90,7 +91,7 @@
 
 .menu__cards {
   padding: 24px 16px;
-  border-top: 1px solid #000;
+  border-top: var(--border-line);
 
   @media (min-width: 768px) {
     padding: 40px;
@@ -117,7 +118,7 @@
 }
 
 .menu__card-img {
-  border: 1px solid #000;
+  border: var(--border-line);
 
   @media (max-width: 767px) {
     grid-column: 1 / -1;
@@ -125,7 +126,7 @@
 }
 
 .menu__card-remove {
-  color: #808080;
+  color: var(--gray);
 }
 
 .menu__btn {

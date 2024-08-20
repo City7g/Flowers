@@ -13,7 +13,7 @@
   transition: 0.3s all ease;
 
   &:hover {
-    color: rgba(#000, 0.6);
+    color: rgba(var(--border-color), 0.6);
   }
 }
 
@@ -24,5 +24,5 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid #000;
+  border: var(--border-line);
 }

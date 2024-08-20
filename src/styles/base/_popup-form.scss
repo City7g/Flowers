@@ -27,7 +27,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background-color: #d2d2d7;
+    background-color: var(--light-gray);
     content: '';
   }
 }
@@ -35,7 +35,7 @@
 .popup-form__or span {
   position: relative;
   padding: 0 12px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .popup-form__login-text {

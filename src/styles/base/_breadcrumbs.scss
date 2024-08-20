@@ -1,6 +1,6 @@
 .breadcrumbs__item {
   &:not(:first-child) {
     margin-left: 12px;
-    color: #808080;
+    color: var(--gray);
   }
 }

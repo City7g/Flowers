@@ -1,12 +1,12 @@
 'use client'
 
-import Image from 'next/image'
-import GoodCard from './GoodCard'
-import './../styles/base/_home-section.scss'
-
 import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
+
+import Image from 'next/image'
+import GoodCard from './GoodCard'
+import './../styles/base/_home-section.scss'
 
 import leftImage from '../../public/first.jpg'
 import image1 from '../../public/goods/item-1.jpg'
@@ -87,7 +87,7 @@ export default function HomeSection() {
       <div className="home-section__main">
         <div className="home-section__header">
           <h1 className="title-h1 home-section__title">
-            Kyiv <br /> LuxeBouquets <sup>R</sup>
+            Kyiv <br /> LuxeBouquets<sup>R</sup>
           </h1>
           <p className="text-body-big home-section__text">
             Discover Uniquely Crafted Bouquets and Gifts for Any Occasion:

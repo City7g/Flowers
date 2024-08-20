@@ -1,9 +1,21 @@
 .category {
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
 
   @media (min-width: 1200px) {
+    position: relative;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 50%);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+      content: '';
+    }
   }
 }
 
@@ -31,16 +43,28 @@
 }
 
 .category__title {
-  color: #fff;
+  color: var(--white);
 }
 
 .category__right {
-  border-left: 1px solid #000;
-  border-top: 1px solid #000;
+  @media (max-width: 767px) {
+    border-top: var(--border-line);
+  }
 
   @media (min-width: 768px) {
+    position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
-    border-top: none;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+      content: '';
+    }
   }
 }

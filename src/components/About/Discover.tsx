@@ -50,7 +50,7 @@ export default function AboutDiscover() {
       </div>
 
       <div className="anim-wrap">
-        <p className="text-subtitle text-section__text">
+        <p className="text-body text-section__text">
           Explore our collection of exquisite bouquets and surprise your loved
           ones with the perfect gift. Click the button below to start shopping
         </p>
