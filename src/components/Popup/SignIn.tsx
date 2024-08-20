@@ -3,8 +3,8 @@
 import { useModal } from '@/store/modal'
 import FormResetPassword from '../Form/ResetPassword'
 import IconGoogle from '../Icon/Google'
-import IconApple from '../Icon/Apple'
 import Popup from './Index'
+import IcomoonIcon from '../Icomoon'
 
 export default function PopupSignIn() {
   const { modal, closeModal } = useModal()
@@ -44,7 +44,7 @@ export default function PopupSignIn() {
           </div>
 
           <div className="btn-secondary">
-            <IconApple />
+            <IcomoonIcon icon="apple" />
             continue with apple
           </div>
         </div>

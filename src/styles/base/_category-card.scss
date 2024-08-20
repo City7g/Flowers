@@ -4,13 +4,7 @@
 }
 
 .category-card + .category-card {
-  border-top: 1px solid #000;
-}
-
-.category-card:nth-child(even) {
-  @media (min-width: 768px) {
-    border-left: 1px solid #000;
-  }
+  border-top: var(--border-line);
 }
 
 .category-card:nth-child(2) {
@@ -34,7 +28,7 @@
 
 .category-card__price {
   font-weight: 500;
-  color: #808080;
+  color: var(--gray);
 }
 
 .category-card__title {

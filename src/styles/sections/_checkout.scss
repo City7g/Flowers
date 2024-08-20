@@ -1,9 +1,22 @@
 .checkout {
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
 
   @media (min-width: 1200px) {
+    position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: flex-start;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+      content: '';
+    }
   }
 }
 
@@ -26,7 +39,7 @@
 .checkout__info {
   padding: 24px 16px;
   margin-bottom: 24px;
-  background: #d2d2d7;
+  background: var(--light-gray);
 
   @media (min-width: 768px) {
     padding: 40px;
@@ -35,18 +48,14 @@
 
 .checkout__order {
   padding: 24px 16px;
-  background: #f5f5f7;
+  background: var(--extra-light);
 
   @media (max-width: 1199px) {
-    border-top: 1px solid #000;
+    border-top: var(--border-line);
   }
 
   @media (min-width: 768px) {
     padding: 40px;
-  }
-
-  @media (min-width: 1200px) {
-    border-left: 1px solid #000;
   }
 }
 
@@ -69,7 +78,7 @@
 .checkout__gift {
   padding-top: 24px;
   margin-bottom: 24px;
-  border-top: 1px solid #d2d2d7;
+  border-top: 1px solid var(--light-gray);
 }
 
 .checkout__gift-text {
@@ -79,7 +88,7 @@
 .checkout__table {
   padding-top: 24px;
   margin-bottom: 24px;
-  border-top: 1px solid #d2d2d7;
+  border-top: 1px solid var(--light-gray);
 }
 
 .table__line,
@@ -97,7 +106,7 @@
 
 .table__total {
   padding-top: 24px;
-  border-top: 1px solid #d2d2d7;
+  border-top: 1px solid var(--light-gray);
 }
 
 .checkout-card {
@@ -108,7 +117,7 @@
 }
 
 .checkout-card__img {
-  border: 1px solid #000;
+  border: var(--border-line);
 }
 
 .checkout-card__title {

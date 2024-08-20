@@ -1,6 +1,16 @@
-.breadcrumbs__item {
-  &:not(:first-child) {
-    margin-left: 12px;
-    color: #808080;
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumb__item:not(.active),
+.breadcrumb__item:not(:last-child) {
+  &::after {
+    margin: 0 4px;
+    content: '/';
   }
+}
+
+.breadcrumb__item.active {
+  color: var(--gray);
 }

@@ -5,6 +5,7 @@ import image1 from '../../../../public/product/item-1.jpg'
 import image2 from '../../../../public/product/item-2.jpg'
 import image3 from '../../../../public/product/item-3.jpg'
 import image4 from '../../../../public/product/item-4.jpg'
+import ProductCategory from '@/components/ProductCategory'
 
 const also = [
   { id: 0, title: 'Rattan Grapefruit', price: 48, img: image1 },
@@ -21,10 +22,7 @@ export default function Product() {
           <Image src={image} alt="Rosy Delight" className="product__img" />
         </div>
         <div className="product__content">
-          <div className="text-overline category product__category">
-            <span>Fresh Flowers</span>
-            <span>Rosy Delight</span>
-          </div>
+          <ProductCategory className="product__category" />
 
           <h1 className="title-h2 product__title">Rosy Delight - $100</h1>
 
@@ -46,7 +44,7 @@ export default function Product() {
             </p>
 
             <label className="label product__options-item">
-              <input type="radio" name="options" value="one" />
+              <input type="radio" name="options" value="one" checked />
               <p className="text-body">One time purchase. Price $100</p>
             </label>
 
@@ -67,7 +65,7 @@ export default function Product() {
       </div>
 
       <div className="alsos">
-        {also.map((item, index) => (
+        {also.map((item) => (
           <div key={item.id} className="also">
             <h3 className="title-h6 also__title">{item.title}</h3>
             <p className="text-caption also__price">price {item.price}$</p>

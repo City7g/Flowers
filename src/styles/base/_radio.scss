@@ -2,8 +2,8 @@ input[type='radio'] {
   position: relative;
   width: 24px;
   height: 24px;
-  background: #d2d2d7;
-  border: 1px solid #000;
+  background: var(--light-gray);
+  border: var(--border-line);
   border-radius: 50%;
   appearance: none;
   transition: 0.3s ease;
@@ -11,7 +11,7 @@ input[type='radio'] {
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    outline: 1px solid #000;
+    outline: var(--border-line);
     outline-offset: 0px;
   }
 
@@ -35,7 +35,7 @@ input[type='radio'] {
   }
 
   &:checked::after {
-    background-color: #000;
+    background-color: var(--border-color);
     transform: translate(-50%, -50%) scale(1);
   }
 }

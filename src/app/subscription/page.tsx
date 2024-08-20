@@ -123,7 +123,9 @@ export default function Subscription() {
       </section>
 
       <section className="why-section">
-        <h2 className="title-h2 why-section__title">How does it work?</h2>
+        <div className="why-section__content">
+          <h2 className="title-h2 why-section__title">How does it work?</h2>
+        </div>
 
         <div className="why-section__blocks">
           {content.map((item) => (
@@ -195,7 +197,7 @@ export default function Subscription() {
               Pay once and do not worry about flowers, our bouquets will be
               beautiful and on time, as many times as you need{' '}
             </p>
-            <Quantity />
+            <Quantity className="plans__quantity" />
           </div>
 
           <button className="btn-primary plans__btn">Checkout</button>

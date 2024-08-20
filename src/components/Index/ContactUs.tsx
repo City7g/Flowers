@@ -73,7 +73,47 @@ export default function ContactUs() {
 
   return (
     <div ref={container} className="contact-us">
-      <div className="contact-us__image-block">
+      <div className="contact-us__left">
+        <div className="contact-us__form">
+          <h2 className="title-h2 contact-us__title">To Contact Us</h2>
+
+          <div className="contact-us__form-subtext-wrap">
+            <p className="text-subtitle contact-us__form-subtext">
+              We will call you back
+            </p>
+          </div>
+
+          <ContactForm />
+        </div>
+
+        <div className="contact-us__links-block">
+          <div className="contact-us__links-left">
+            <h3 className="title-h3 contact-us__subtitle">Phone</h3>
+            <div className="phone-links">
+              <a href="tel:+380980099777" className="text-link phone-link">
+                <IcomoonIcon icon={'phone'} />
+                +380980099777
+              </a>
+              <a href="tel:+380980099111" className="text-link phone-link">
+                <IcomoonIcon icon={'phone'} />
+                +380980099111
+              </a>
+            </div>
+          </div>
+          <div className="contact-us__links-right">
+            <h3 className="title-h3 contact-us__subtitle">Address</h3>
+            <div className="address-link">
+              <p>opening hours: 8 to 11 p.m.</p>
+              <a href="#" className="text-link location">
+                <IcomoonIcon icon={'pin'} />
+                15/4 Khreshchatyk Street, Kyiv
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="contact-us__right">
         <div className="contact-us__image">
           <Image src={image} alt="" className="contact-us__img" />
         </div>
@@ -82,42 +122,6 @@ export default function ContactUs() {
           <h3 className="title-h3 contact-us__socials-title">Follow us:</h3>
 
           <Socials className="contact-us__socials-links" />
-        </div>
-      </div>
-      <div className="contact-us__form-block">
-        <h2 className="title-h2 contact-us__title">To Contact Us</h2>
-
-        <div className="contact-us__form-subtext-wrap">
-          <p className="text-subtitle contact-us__form-subtext">
-            We will call you back
-          </p>
-        </div>
-
-        <ContactForm />
-      </div>
-      <div className="contact-us__links-block">
-        <div className="contact-us__links-left">
-          <h3 className="title-h3 contact-us__subtitle">Phone</h3>
-          <div className="phone-links">
-            <a href="tel:+380980099777" className="text-link phone-link">
-              <IcomoonIcon icon={'phone'} />
-              +380980099777
-            </a>
-            <a href="tel:+380980099111" className="text-link phone-link">
-              <IcomoonIcon icon={'phone'} />
-              +380980099111
-            </a>
-          </div>
-        </div>
-        <div className="contact-us__links-rigth">
-          <h3 className="title-h3 contact-us__subtitle">Address</h3>
-          <div className="address-link">
-            <p>opening hours: 8 to 11 p.m.</p>
-            <a href="#" className="text-link location">
-              <IcomoonIcon icon={'pin'} />
-              15/4 Khreshchatyk Street, Kyiv
-            </a>
-          </div>
         </div>
       </div>
     </div>

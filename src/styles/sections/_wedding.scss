@@ -1,6 +1,6 @@
 .wedding {
-  color: #fff;
-  border-bottom: 1px solid #000;
+  color: var(--white);
+  border-bottom: var(--border-line);
   background-image: url('/service-bg.png');
   background-size: cover;
   background-repeat: no-repeat;

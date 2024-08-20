@@ -43,8 +43,7 @@ export default function GoodCard({ title, image, reverse }) {
   })
 
   return (
-    <Link
-      href={`/product/${title.toLowerCase().replaceAll(' ', '-')}`}
+    <div
       ref={card}
       className={`good-card ${reverse ? 'good-card--reverse' : ''}`}
     >
@@ -52,7 +51,7 @@ export default function GoodCard({ title, image, reverse }) {
         <h3 className="title-h3 good-card__title">{title}</h3>
         <BaseLink
           text="Shop now"
-          href="/category"
+          href={`/product/${title.toLowerCase().replaceAll(' ', '-')}`}
           isRight={reverse}
           className="good-card__link"
         />
@@ -61,6 +60,6 @@ export default function GoodCard({ title, image, reverse }) {
       <div className="good-card__image">
         <Image src={image} alt="good-card" />
       </div>
-    </Link>
+    </div>
   )
 }

@@ -1,0 +1,16 @@
+.product-category {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-category__item:not(.active),
+.product-category__item:not(:last-child) {
+  &::after {
+    margin: 0 4px;
+    content: '/';
+  }
+}
+
+.product-category__item.active {
+  color: var(--gray);
+}

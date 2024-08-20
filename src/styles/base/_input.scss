@@ -3,19 +3,19 @@ input {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
-  border: 1px solid #d2d2d7;
+  border: 1px solid var(--light-gray);
 
   &::placeholder {
-    color: #808080;
+    color: var(--gray);
   }
 
   &:hover {
-    border-color: #808080;
+    border-color: var(--gray);
   }
 
   &:focus {
-    border-color: #808080;
-    outline: 1px solid #808080;
+    border-color: var(--gray);
+    outline: 1px solid var(--gray);
   }
 }
 
@@ -28,6 +28,6 @@ textarea {
   resize: none;
 
   &:focus {
-    outline: 1px solid #000;
+    outline: var(--border-line);
   }
 }

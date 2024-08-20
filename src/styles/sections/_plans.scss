@@ -1,10 +1,22 @@
 .plans {
-  display: grid;
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
 
   @media (min-width: 1200px) {
+    position: relative;
+    display: grid;
     grid-template-columns: 50% 50%;
     align-items: flex-start;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+      content: '';
+    }
   }
 }
 
@@ -50,16 +62,11 @@
   padding: 40px 16px;
 
   @media (max-width: 1199px) {
-    border-top: 1px solid #000;
+    border-top: var(--border-line);
   }
 
   @media (min-width: 768px) {
     padding: 80px 40px;
-  }
-
-  @media (min-width: 1200px) {
-    margin-right: -1px;
-    border-right: 1px solid #000;
   }
 }
 
@@ -90,8 +97,8 @@
 
 .plans__block {
   padding: 40px 0;
-  border-top: 1px solid #d2d2d7;
-  border-bottom: 1px solid #d2d2d7;
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .plans__block + .plans__block {
@@ -117,7 +124,7 @@
 }
 
 .plan__top {
-  border: 1px solid #d2d2d7;
+  border: 1px solid var(--light-gray);
   border-bottom-width: 0;
 
   @media (min-width: 768px) {
@@ -137,16 +144,22 @@
   padding: 16px;
 
   @media (max-width: 767px) {
-    border-top: 1px solid #d2d2d7;
+    border-top: 1px solid var(--light-gray);
   }
 
   @media (min-width: 768px) {
-    border-left: 1px solid #d2d2d7;
+    border-left: 1px solid var(--light-gray);
   }
 }
 
 .plan__name {
   margin-bottom: 16px;
+}
+
+.plans__quantity {
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .plan__list li {

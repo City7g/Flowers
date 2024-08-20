@@ -1,10 +1,22 @@
 .s-base {
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
 
   @media (min-width: 1200px) {
+    position: relative;
     display: grid;
+    grid-template-columns: 50% 50%;
     align-items: flex-start;
-    grid-template-columns: repeat(2, 1fr);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+      content: '';
+    }
   }
 }
 
@@ -26,11 +38,7 @@
 
 .s-base__right {
   @media (max-width: 1199px) {
-    border-top: 1px solid #000;
-  }
-
-  @media (min-width: 1200px) {
-    border-left: 1px solid #000;
+    border-top: var(--border-line);
   }
 }
 

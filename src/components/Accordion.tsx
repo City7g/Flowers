@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import IconArrow from './Icon/Arraw'
+import IcomoonIcon from './Icomoon'
 
 export default function Accordion({ className = '', content }) {
   const [active, setActive] = useState(0)
@@ -24,7 +25,7 @@ export default function Accordion({ className = '', content }) {
               onClick={() => changeActive(index)}
               className="accordion__arrow"
             >
-              <IconArrow />
+              <IcomoonIcon icon="arrow-bottom-right" />
             </div>
           </div>
 

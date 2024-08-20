@@ -1,5 +1,20 @@
 .story-section {
-  border-bottom: 1px solid #000;
+  border-bottom: var(--border-line);
+
+  @media (min-width: 1200px) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+      content: '';
+    }
+  }
 }
 
 .story {
@@ -10,7 +25,7 @@
 }
 
 .story + .story {
-  border-top: 1px solid #000;
+  border-top: var(--border-line);
 }
 
 .story__image {
@@ -49,18 +64,11 @@
   padding: 40px 16px;
 
   @media (max-width: 1199px) {
-    border-top: 1px solid #000;
+    border-top: var(--border-line);
   }
 
   @media (min-width: 768px) {
     padding: 80px;
-  }
-}
-
-.story:nth-child(odd) .story__content,
-.story:nth-child(even) .story__img {
-  @media (min-width: 1200px) {
-    border-left: 1px solid #000;
   }
 }
 
