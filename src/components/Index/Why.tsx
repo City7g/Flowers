@@ -1,6 +1,6 @@
 'use client'
 
-import { gsap, ScrollTrigger } from 'gsap/all'
+import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
@@ -26,44 +26,47 @@ const content = [
 export default function Why() {
   const container = useRef()
 
-  useGSAP(() => {
-    const mainTitle = document.querySelector('.why-section__title')
-    const titles = gsap.utils.toArray('.why-section__block-title')
-    const texts = gsap.utils.toArray('.why-section__block-text')
+  useGSAP(
+    () => {
+      const mainTitle = document.querySelector('.why-section__title')
+      const titles = gsap.utils.toArray('.why-section__block-title')
+      const texts = gsap.utils.toArray('.why-section__block-text')
 
-    gsap.from(mainTitle, {
-      opacity: 0,
-      y: 100,
-      rotate: 10,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: mainTitle,
-      },
-    })
-
-    titles.forEach(title => {
-      gsap.from(title, {
+      gsap.from(mainTitle, {
         opacity: 0,
         y: 100,
         rotate: 10,
         duration: 0.6,
         scrollTrigger: {
-          trigger: title,
+          trigger: mainTitle,
         },
       })
-    })
 
-    texts.forEach(text => {
-      gsap.from(text, {
-        opacity: 0,
-        y: 100,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: text,
-        },
+      titles.forEach((title) => {
+        gsap.from(title, {
+          opacity: 0,
+          y: 100,
+          rotate: 10,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: title,
+          },
+        })
       })
-    })
-  })
+
+      texts.forEach((text) => {
+        gsap.from(text, {
+          opacity: 0,
+          y: 100,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: text,
+          },
+        })
+      })
+    },
+    { scope: container }
+  )
 
   return (
     <div ref={container} className="why-section">
@@ -72,9 +75,9 @@ export default function Why() {
           <h2 className="title-h2 why-section__title">Why choose us?</h2>
         </div>
       </div>
-      
+
       <div className="why-section__blocks">
-        {content.map(item => (
+        {content.map((item) => (
           <div key={item.title} className="why-section__block">
             <div className="why-section__block-title-wrap">
               <h3 className="title-h3 why-section__block-title">

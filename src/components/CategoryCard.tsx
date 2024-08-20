@@ -8,36 +8,39 @@ import { useRef } from 'react'
 export default function CategoryCard({ title, price, img }) {
   const card = useRef()
 
-  useGSAP(() => {
-    const tl = gsap.timeline()
+  useGSAP(
+    () => {
+      const tl = gsap.timeline()
 
-    tl.from(card.current.querySelector('.category-card__img'), {
-      scale: 1.5,
-      opacity: 0,
-      duration: 0.6,
-    })
-      .from(
-        card.current.querySelector('.category-card__title'),
-        {
-          opacity: 0,
-          y: 50,
-        },
-        0.3
-      )
-      .from(
-        card.current.querySelector('.category-card__price'),
-        {
-          opacity: 0,
-          y: 50,
-        },
-        0.5
-      )
+      tl.from(card.current.querySelector('.category-card__img'), {
+        scale: 1.5,
+        opacity: 0,
+        duration: 0.6,
+      })
+        .from(
+          card.current.querySelector('.category-card__title'),
+          {
+            opacity: 0,
+            y: 50,
+          },
+          0.3
+        )
+        .from(
+          card.current.querySelector('.category-card__price'),
+          {
+            opacity: 0,
+            y: 50,
+          },
+          0.5
+        )
 
-    ScrollTrigger.create({
-      trigger: card.current,
-      animation: tl,
-    })
-  })
+      ScrollTrigger.create({
+        trigger: card.current,
+        animation: tl,
+      })
+    },
+    { scope: card }
+  )
 
   return (
     <div ref={card} className="category-card">

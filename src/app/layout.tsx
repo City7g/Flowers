@@ -15,13 +15,17 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, useGSAP)
 }
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
     <html lang="en" className={gilroy.className}>
+      <head>
+        <title>Flowers</title>
+      </head>
+
       <body>
         <Header />
 

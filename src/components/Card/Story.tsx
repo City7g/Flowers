@@ -8,38 +8,41 @@ import Image from 'next/image'
 export default function StoryCard({ story: { id, title, text, img } }) {
   const card = useRef()
 
-  useGSAP(() => {
-    const title = card.current.querySelector('.story__title')
-    const text = card.current.querySelector('.story__text')
-    const img = card.current.querySelector('.story__img')
+  useGSAP(
+    () => {
+      const title = card.current.querySelector('.story__title')
+      const text = card.current.querySelector('.story__text')
+      const img = card.current.querySelector('.story__img')
 
-    gsap.from(title, {
-      opacity: 0,
-      y: 100,
-      rotate: 10,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: title.parentNode,
-      },
-    })
+      gsap.from(title, {
+        opacity: 0,
+        y: 100,
+        rotate: 10,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: title.parentNode,
+        },
+      })
 
-    gsap.from(text, {
-      opacity: 0,
-      y: 100,
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: text.parentNode,
-      },
-    })
+      gsap.from(text, {
+        opacity: 0,
+        y: 100,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: text.parentNode,
+        },
+      })
 
-    gsap.from(img, {
-      scale: 1.5,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: img.parentNode,
-      },
-    })
-  })
+      gsap.from(img, {
+        scale: 1.5,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: img.parentNode,
+        },
+      })
+    },
+    { scope: card }
+  )
 
   return (
     <div ref={card} className="story">

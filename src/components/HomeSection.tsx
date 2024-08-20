@@ -96,7 +96,12 @@ export default function HomeSection() {
         </div>
         <div className="home-section__footer">
           <div className="home-section__image">
-            <Image src={leftImage} alt="img-hero" style={{ height: 'auto' }} />
+            <Image
+              src={leftImage}
+              alt="img-hero"
+              style={{ height: 'auto' }}
+              priority={true}
+            />
           </div>
           <div className="home-section__footer-text-wrap">
             <p className="text-caption home-section__footer-text">
