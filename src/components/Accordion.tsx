@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import IconArrow from './Icon/Arraw'
-import IcomoonIcon from './Icomoon'
+import IcomoonIcon from '@/components/Icomoon'
 
 export default function Accordion({ className = '', content }) {
   const [active, setActive] = useState(0)

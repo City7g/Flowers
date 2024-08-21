@@ -1,7 +1,7 @@
-import AboutDiscover from '@/components/About/Discover'
-import AboutFirst from '@/components/About/First'
-import AboutStory from '@/components/About/Story'
-import AboutText from '@/components/About/Text'
+import AboutDiscover from '@/components/about/Discover'
+import AboutFirst from '@/components/about/First'
+import AboutStory from '@/components/about/Story'
+import AboutText from '@/components/about/Text'
 
 export default function AboutPage() {
   return (

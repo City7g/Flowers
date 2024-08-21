@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Quantity from '../Quantity'
-import ProductCategory from '../ProductCategory'
+import Quantity from '@/components/Quantity'
+import ProductCategory from '@/components/ProductCategory'
 import image from '@/assets/product.jpg'
 
 export default function ProductInfo() {

@@ -6,7 +6,7 @@ import '../../styles/base/_good-card.scss'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
-import BaseLink from '../Link'
+import BaseLink from '@/components/Link'
 
 export default function GoodCard({ title, image, reverse }) {
   const card = useRef()

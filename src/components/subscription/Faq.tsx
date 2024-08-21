@@ -1,4 +1,4 @@
-import Accordion from '../Accordion'
+import Accordion from '@/components/Accordion'
 
 const faq = [
   'How often will I get a new bouquet?',

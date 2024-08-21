@@ -1,14 +1,14 @@
 'use client'
 
+import Image from 'next/image'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import ContactForm from '../Form/ContactForm'
-import Socials from '../Socials'
+import ContactForm from '@/components/form/ContactForm'
+import Socials from '@/components/Socials'
+import IcomoonIcon from '@/components/Icomoon'
 import image from '@/assets/contact.png'
-import Image from 'next/image'
-import IcomoonIcon from '../Icomoon'
 
 export default function ContactUs() {
   const container = useRef()

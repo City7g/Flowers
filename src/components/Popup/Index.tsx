@@ -1,5 +1,3 @@
-import styles from './index.module.css'
-
 export default function Popup({
   children,
   isShow,

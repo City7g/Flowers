@@ -1,11 +1,11 @@
 'use client'
 
+import Image from 'next/image'
 import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import Image from 'next/image'
-import GoodCard from './card/Good'
+import GoodCard from '@/components/card/Good'
 import './../styles/base/_home-section.scss'
 
 import image from '@/assets/first.jpg'

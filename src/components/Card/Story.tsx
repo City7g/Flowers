@@ -1,9 +1,9 @@
 'use client'
 
+import Image from 'next/image'
 import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
-import Image from 'next/image'
 
 export default function StoryCard({ story: { id, title, text, img } }) {
   const card = useRef()

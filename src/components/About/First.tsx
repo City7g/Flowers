@@ -5,7 +5,7 @@ import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import Socials from '../Socials'
+import Socials from '@/components/Socials'
 import image from '@/assets/about/first-bg.jpg'
 
 export default function AboutFirst() {
