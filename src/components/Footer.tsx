@@ -1,5 +1,5 @@
-import FormRemind from './Form/Remind'
-import Socials from './Socials'
+import FormRemind from '@/components/form/Remind'
+import Socials from '@/components/Socials'
 
 export default function Footer() {
   return (

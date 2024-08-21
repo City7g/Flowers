@@ -1,12 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { useModal } from '@/store/modal'
-import Close from '../Header/Close'
-import Socials from '../Socials'
-import Popup from './Index'
-import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
+import Popup from '@/components/popup/Index'
+import Close from '@/components/header/Close'
+import Socials from '@/components/Socials'
+import { useModal } from '@/store/modal'
 
 export default function PopupMenu() {
   const { modal, openModal, closeModal } = useModal()
@@ -40,7 +40,7 @@ export default function PopupMenu() {
       <Link href="/" className="title-h5 menu__link">
         Home
       </Link>
-      <Link href="/category" className="title-h5 menu__link">
+      <Link href="/shop" className="title-h5 menu__link">
         Shop
       </Link>
       <Link href="/about" className="title-h5 menu__link">

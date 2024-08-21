@@ -1,5 +1,3 @@
-const links = ['Information', 'Shipping', 'Payment']
-
 export default function BreadCrumbs({ className = '' }) {
   return (
     <nav className={className} aria-label="breadcrumb">

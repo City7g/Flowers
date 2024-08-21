@@ -1,7 +1,7 @@
-import StoryCard from '../Card/Story'
-import image1 from '../../../public/about/story-1.jpg'
-import image2 from '../../../public/about/story-2.jpg'
-import image3 from '../../../public/about/story-3.jpg'
+import StoryCard from '@/components/card/Story'
+import image1 from '@/assets/about/story-1.jpg'
+import image2 from '@/assets/about/story-2.jpg'
+import image3 from '@/assets/about/story-3.jpg'
 
 const stories = [
   {

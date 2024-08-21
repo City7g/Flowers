@@ -1,10 +1,10 @@
 'use client'
 
+import Link from 'next/link'
 import { useModal } from '@/store/modal'
 import { usePathname } from 'next/navigation'
-import Burger from './Burger'
-import Link from 'next/link'
-import IcomoonIcon from '../Icomoon'
+import Burger from '@/components/header/Burger'
+import IcomoonIcon from '@/components/Icomoon'
 
 export default function Header() {
   const { modal, openModal, closeModal } = useModal()
@@ -17,12 +17,12 @@ export default function Header() {
     <header className="header">
       <div className="header__left">
         <div className=" header__link">
-          {usePathname() === '/category' ? (
+          {usePathname() === '/shop' ? (
             <Link href="/" className="btn-anim">
               <span>Home</span>
             </Link>
           ) : (
-            <Link href="/category" className="btn-anim">
+            <Link href="/shop" className="btn-anim">
               <span>Shop</span>
             </Link>
           )}

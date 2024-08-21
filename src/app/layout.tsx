@@ -1,15 +1,15 @@
 'use client'
 
-import '../styles/main.scss'
-import Header from '@/components/Header/Main'
-import PopupMenu from '@/components/Popup/Menu'
+import Header from '@/components/header/Main'
+import PopupMenu from '@/components/popup/Menu'
 import Footer from '@/components/Footer'
-import PopupResetPassword from '@/components/Popup/ResetPassword'
-import PopupCart from '@/components/Popup/Cart'
-import PopupSignIn from '@/components/Popup/SignIn'
+import PopupResetPassword from '@/components/popup/ResetPassword'
+import PopupCart from '@/components/popup/Cart'
+import PopupSignIn from '@/components/popup/SignIn'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { gilroy } from './fonts'
+import '@/styles/main.scss'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, useGSAP)

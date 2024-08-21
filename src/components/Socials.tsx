@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import IcomoonIcon from './Icomoon'
+import IcomoonIcon from '@/components/Icomoon'
 
 const socials = ['instagram', 'pinterest', 'facebook', 'twitter', 'telegram']
 

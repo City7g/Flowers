@@ -1,10 +1,10 @@
 'use client'
 
 import { useModal } from '@/store/modal'
-import FormResetPassword from '../Form/ResetPassword'
-import IconGoogle from '../Icon/Google'
-import Popup from './Index'
-import IcomoonIcon from '../Icomoon'
+import Popup from '@/components/popup/Index'
+import FormResetPassword from '@/components/form/ResetPassword'
+import IconGoogle from '@/components/icon/Google'
+import IcomoonIcon from '@/components/Icomoon'
 
 export default function PopupSignIn() {
   const { modal, closeModal } = useModal()

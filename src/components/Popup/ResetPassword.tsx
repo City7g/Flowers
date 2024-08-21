@@ -1,8 +1,8 @@
 'use client'
 
 import { useModal } from '@/store/modal'
-import FormResetPassword from '../Form/ResetPassword'
-import Popup from './Index'
+import FormResetPassword from '@/components/form/ResetPassword'
+import Popup from '@/components/popup/Index'
 
 export default function PopupResetPassword() {
   const { modal, closeModal } = useModal()

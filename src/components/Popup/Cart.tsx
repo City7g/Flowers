@@ -1,10 +1,10 @@
 'use client'
 
-import { useModal } from '@/store/modal'
-import Close from '../Header/Close'
-import Popup from './Index'
-import checkoutImage from '../../../public/checkout.jpg'
 import Image from 'next/image'
+import Close from '@/components/header/close'
+import Popup from '@/components/popup/Index'
+import { useModal } from '@/store/modal'
+import checkoutImage from '@/assets/checkout.jpg'
 
 export default function PopupCart() {
   const { modal, closeModal } = useModal()

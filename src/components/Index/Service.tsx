@@ -1,11 +1,11 @@
 'use client'
 
+import Image from 'next/image'
 import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import image from '../../../public/service.png'
-import Image from 'next/image'
+import image from '@/assets/service.png'
 
 export default function IndexService() {
   const container = useRef()
