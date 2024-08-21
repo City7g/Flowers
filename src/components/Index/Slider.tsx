@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import googleIcon from '../../../public/icons/google-logo.svg'
+import googleIcon from '@/assets/icons/google-logo.svg'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -30,7 +30,7 @@ export const slides = [
   },
 ]
 
-export default function Slider() {
+export default function IndexSlider() {
   return (
     <div className="slider-section">
       <a href="https://www.google.com/" target="black">

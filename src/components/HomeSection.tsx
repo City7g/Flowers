@@ -8,12 +8,12 @@ import Image from 'next/image'
 import GoodCard from './card/Good'
 import './../styles/base/_home-section.scss'
 
-import leftImage from '../../public/first.jpg'
-import image1 from '../../public/goods/item-1.jpg'
-import image2 from '../../public/goods/item-2.jpg'
-import image3 from '../../public/goods/item-3.jpg'
-import image4 from '../../public/goods/item-4.jpg'
-import image5 from '../../public/goods/item-5.jpg'
+import image from '@/assets/first.jpg'
+import image1 from '@/assets/goods/item-1.jpg'
+import image2 from '@/assets/goods/item-2.jpg'
+import image3 from '@/assets/goods/item-3.jpg'
+import image4 from '@/assets/goods/item-4.jpg'
+import image5 from '@/assets/goods/item-5.jpg'
 
 const cards = [
   {
@@ -97,7 +97,7 @@ export default function HomeSection() {
         <div className="home-section__footer">
           <div className="home-section__image">
             <Image
-              src={leftImage}
+              src={image}
               alt="img-hero"
               style={{ height: 'auto' }}
               priority={true}

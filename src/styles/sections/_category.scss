@@ -25,7 +25,7 @@
   align-items: center;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url('./../../../public/category/left-colum.jpg') no-repeat center/cover;
+    url('./../../assets/category/left-colum.jpg') no-repeat center/cover;
   height: calc(100vh - var(--header-height));
 
   @media (min-width: 1200px) {

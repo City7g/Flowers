@@ -4,7 +4,7 @@ import { gsap } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-import image from '../../../public/service.png'
+import image from '@/assets/service.png'
 import Image from 'next/image'
 
 export default function IndexService() {

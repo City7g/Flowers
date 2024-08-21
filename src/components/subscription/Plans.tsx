@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Quantity from '@/components/Quantity'
-import image from '../../../public/plans.jpg'
-import plan1 from '../../../public/plans/plan-1.jpg'
-import plan2 from '../../../public/plans/plan-2.jpg'
-import plan3 from '../../../public/plans/plan-3.jpg'
+import image from '@/assets/plans.jpg'
+import plan1 from '@/assets/plans/plan-1.jpg'
+import plan2 from '@/assets/plans/plan-2.jpg'
+import plan3 from '@/assets/plans/plan-3.jpg'
 
 const plans = [
   {

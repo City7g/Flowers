@@ -6,7 +6,7 @@ import { useRef } from 'react'
 
 import ContactForm from '../Form/ContactForm'
 import Socials from '../Socials'
-import image from '../../../public/contact.png'
+import image from '@/assets/contact.png'
 import Image from 'next/image'
 import IcomoonIcon from '../Icomoon'
 

@@ -3,7 +3,7 @@
 import { useModal } from '@/store/modal'
 import Close from '../Header/Close'
 import Popup from './Index'
-import checkoutImage from '../../../public/checkout.jpg'
+import checkoutImage from '@/assets/checkout.jpg'
 import Image from 'next/image'
 
 export default function PopupCart() {

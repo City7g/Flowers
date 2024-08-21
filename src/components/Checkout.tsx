@@ -2,7 +2,7 @@ import Image from 'next/image'
 import BreadCrumbs from '@/components/BreadCrumbs'
 import FormCheckoutFirst from '@/components/Form/Checkout/First'
 import FormCheckoutGift from '@/components/Form/Checkout/Gift'
-import image from '../../../public/checkout.jpg'
+import image from '@/assets/checkout.jpg'
 import IcomoonIcon from '@/components/Icomoon'
 
 export default function Checkout() {

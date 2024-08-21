@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Accordion from '@/components/Accordion'
-import image from '../../../public/subscription-first.jpg'
+import image from '@/assets/subscription-first.jpg'
 
 export default function Subscription() {
   return (
