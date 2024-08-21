@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Close from '@/components/header/close'
+import Close from '@/components/header/Close'
 import Popup from '@/components/popup/Index'
 import { useModal } from '@/store/modal'
 import checkoutImage from '@/assets/checkout.jpg'

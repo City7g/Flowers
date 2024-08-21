@@ -1,13 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function FormCheckoutFirst() {
   const [text, setText] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
 
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = (e: React.FormEvent) => {
     e.preventDefault()
     setText('')
     setEmail('')
@@ -21,7 +21,7 @@ export default function FormCheckoutFirst() {
       <input
         type="text"
         value={text}
-        onInput={(e) => setText(e.target.value)}
+        onInput={(e) => setText((e.target as HTMLInputElement).value)}
         className="form__input"
         placeholder="Your Name"
       />
@@ -29,7 +29,7 @@ export default function FormCheckoutFirst() {
       <input
         type="email"
         value={email}
-        onInput={(e) => setEmail(e.target.value)}
+        onInput={(e) => setEmail((e.target as HTMLInputElement).value)}
         className="form__input"
         placeholder="Your Email"
       />
@@ -37,7 +37,7 @@ export default function FormCheckoutFirst() {
       <input
         type="tel"
         value={phone}
-        onInput={(e) => setPhone(e.target.value)}
+        onInput={(e) => setPhone((e.target as HTMLInputElement).value)}
         className="form__input"
         placeholder="Your Phone number *"
       />

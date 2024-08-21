@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
 export default function CategoryCard({ title, price, img }) {
-  const card = useRef()
+  const card = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {

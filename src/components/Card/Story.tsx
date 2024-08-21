@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
 export default function StoryCard({ story: { id, title, text, img } }) {
-  const card = useRef()
+  const card = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {
@@ -20,7 +20,7 @@ export default function StoryCard({ story: { id, title, text, img } }) {
         rotate: 10,
         duration: 0.6,
         scrollTrigger: {
-          trigger: title.parentNode,
+          trigger: title.parentElement,
         },
       })
 
@@ -29,7 +29,7 @@ export default function StoryCard({ story: { id, title, text, img } }) {
         y: 100,
         duration: 0.5,
         scrollTrigger: {
-          trigger: text.parentNode,
+          trigger: text.parentElement,
         },
       })
 
@@ -37,7 +37,7 @@ export default function StoryCard({ story: { id, title, text, img } }) {
         scale: 1.5,
         opacity: 0,
         scrollTrigger: {
-          trigger: img.parentNode,
+          trigger: img.parentElement,
         },
       })
     },

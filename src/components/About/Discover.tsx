@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
 export default function AboutDiscover() {
-  const container = useRef()
+  const container = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {
@@ -37,7 +37,7 @@ export default function AboutDiscover() {
         y: 50,
         duration: 0.5,
         scrollTrigger: {
-          trigger: btn.parentNode,
+          trigger: btn.parentElement,
         },
       })
     },

@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
 export default function AboutText() {
-  const container = useRef()
+  const container = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {

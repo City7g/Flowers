@@ -11,7 +11,7 @@ import IcomoonIcon from '@/components/Icomoon'
 import image from '@/assets/contact.png'
 
 export default function ContactUs() {
-  const container = useRef()
+  const container = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {

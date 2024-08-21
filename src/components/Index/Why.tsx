@@ -29,8 +29,8 @@ export default function Why() {
   useGSAP(
     () => {
       const mainTitle = document.querySelector('.why-section__title')
-      const titles = gsap.utils.toArray('.why-section__block-title')
-      const texts = gsap.utils.toArray('.why-section__block-text')
+      const titles = document.querySelectorAll('.why-section__block-title')
+      const texts = document.querySelectorAll('.why-section__block-text')
 
       gsap.from(mainTitle, {
         opacity: 0,
