@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import image1 from '@/assets/product/item-1.jpg'
-import image2 from '@/assets/public/product/item-2.jpg'
-import image3 from '@/assets/public/product/item-3.jpg'
-import image4 from '@/assets/public/product/item-4.jpg'
+import image2 from '@/assets/product/item-2.jpg'
+import image3 from '@/assets/product/item-3.jpg'
+import image4 from '@/assets/product/item-4.jpg'
 
 const also = [
   { id: 0, title: 'Rattan Grapefruit', price: 48, img: image1 },

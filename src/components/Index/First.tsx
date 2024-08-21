@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
 import GoodCard from '@/components/card/Good'
-import './../styles/base/_home-section.scss'
+import '@/styles/base/_home-section.scss'
 
 import image from '@/assets/first.jpg'
 import image1 from '@/assets/goods/item-1.jpg'

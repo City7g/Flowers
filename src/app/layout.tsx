@@ -9,7 +9,7 @@ import PopupSignIn from '@/components/popup/SignIn'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { gilroy } from './fonts'
-import '../styles/main.scss'
+import '@/styles/main.scss'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, useGSAP)
