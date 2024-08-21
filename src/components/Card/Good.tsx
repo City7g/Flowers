@@ -9,7 +9,7 @@ import BaseLink from '@/components/Link'
 import '@/styles/base/_good-card.scss'
 
 export default function GoodCard({ title, image, reverse }) {
-  const card = useRef()
+  const card = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {

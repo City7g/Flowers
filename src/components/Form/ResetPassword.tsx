@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function FormResetPassword() {
   const [text, setText] = useState('')
 
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = (e: React.FormEvent) => {
     e.preventDefault()
     setText('')
   }
@@ -16,7 +16,7 @@ export default function FormResetPassword() {
       <input
         type="text"
         value={text}
-        onInput={(e) => setText(e.target.value)}
+        onInput={(e) => setText((e.target as HTMLInputElement).value)}
         className="form__input"
         placeholder="+380 XX XXX XX XX"
       />

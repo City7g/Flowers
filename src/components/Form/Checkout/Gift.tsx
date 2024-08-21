@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function FormCheckoutGift() {
   const [text, setText] = useState('')
 
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = (e: React.FormEvent) => {
     e.preventDefault()
     setText('')
   }
@@ -19,7 +19,7 @@ export default function FormCheckoutGift() {
       <input
         type="email"
         value={text}
-        onInput={(e) => setText(e.target.value)}
+        onInput={(e) => setText((e.target as HTMLInputElement).value)}
         className="form__input"
         placeholder="Gift card"
       />

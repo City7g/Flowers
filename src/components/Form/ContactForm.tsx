@@ -1,21 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function ContactForm() {
   const [text, setText] = useState('')
 
-  const onSubmitHandler = e => {
+  const onSubmitHandler = (e: React.FormEvent) => {
     e.preventDefault()
     setText('')
   }
 
   return (
-    <form onSubmit={onSubmitHandler} className="form form--horisontal" noValidate>
+    <form
+      onSubmit={onSubmitHandler}
+      className="form form--horisontal"
+      noValidate
+    >
       <input
         type="email"
         value={text}
-        onInput={e => setText(e.target.value)}
+        onInput={(e) => setText((e.target as HTMLInputElement).value)}
         className="form__input"
         placeholder="+380 XX XXX XX XX"
       />
